@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>nc</string>
+		<string>prg</string>
+		<string>mpf</string>
+	</array>
+	<key>name</key>
+	<string>G-code</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>g commands</string>
+			<key>match</key>
+			<string>G\d+</string>
+			<key>name</key>
+			<string>support.variable</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>m commands</string>
+			<key>match</key>
+			<string>M\d+</string>
+			<key>name</key>
+			<string>support.constant</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>comments</string>
+			<key>match</key>
+			<string>\(.*\)</string>
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>flow control operators</string>
+			<key>match</key>
+			<string>(IF|THEN|AND|OR|WHILE|GOTO)</string>
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>functions</string>
+			<key>match</key>
+			<string>(ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>comparison operators</string>
+			<key>match</key>
+			<string>(GT|LT|GE|LE|EQ)</string>
+			<key>name</key>
+			<string>keyword.operator</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>flow control locations</string>
+			<key>match</key>
+			<string>(?&lt;=GOTO|DO)\d+</string>
+			<key>name</key>
+			<string>markup.italic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>variables</string>
+			<key>match</key>
+			<string>(#\d+)</string>
+			<key>name</key>
+			<string>variable.other</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions</string>
+			<key>match</key>
+			<string>([XYZABC]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>markup.bold</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>arc positions</string>
+			<key>match</key>
+			<string>([IJK])(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>markup.italic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions</string>
+			<key>match</key>
+			<string>(?&lt;=[XYZABC])([\d\.-])*</string>
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>feeds &amp; speeds</string>
+			<key>match</key>
+			<string>(?&lt;= )[FS]([\d\.-])+</string>
+			<key>name</key>
+			<string>variable.parameter</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>O &amp; N numberes</string>
+			<key>match</key>
+			<string>([ON]([\d\.-])+)</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>brackets</string>
+			<key>match</key>
+			<string>(\[|\])</string>
+			<key>name</key>
+			<string>string.interpolated</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.iso6983</string>
+	<key>uuid</key>
+	<string>e6875107-21f9-449b-bbae-036db969b3d2</string>
+</dict>
+</plist>

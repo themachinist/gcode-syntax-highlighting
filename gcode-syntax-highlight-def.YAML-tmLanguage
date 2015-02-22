@@ -1,0 +1,64 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: G-code
+scopeName: source.iso6983
+fileTypes: [nc,prg,mpf]
+uuid: e6875107-21f9-449b-bbae-036db969b3d2
+
+patterns:
+- comment: g commands
+  name: support.variable
+  match: G\d+
+
+- comment: m commands
+  name: support.constant
+  match: M\d+
+
+- comment: comments
+  name: comment.line
+  match: \(.*\)
+
+- comment: flow control operators
+  name: keyword.control
+  match: (IF|THEN|AND|OR|WHILE|GOTO)
+
+- comment: functions
+  name: support.function
+  match: (ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)
+
+- comment: comparison operators
+  name: keyword.operator
+  match: (GT|LT|GE|LE|EQ)
+
+- comment: flow control locations
+  name: markup.italic
+  match: (?<=GOTO|DO)\d+
+
+- comment: variables
+  name: variable.other
+  match: (#\d+)
+
+- comment: positions
+  name: markup.bold
+  match: ([XYZABC]{1})(?=([\d\.-])*)
+
+- comment: arc positions
+  name: markup.italic
+  match: ([IJK])(?=([\d\.-])*)
+
+- comment: positions
+  name: constant.numeric
+  match: (?<=[XYZABC])([\d\.-])*
+
+- comment: feeds & speeds
+  name: variable.parameter
+  match: (?<= )[FS]([\d\.-])+
+
+- comment: O & N numberes
+  name: support.function
+  match: ([ON]([\d\.-])+)
+
+- comment: brackets
+  name: string.interpolated
+  match: (\[|\])
+...
