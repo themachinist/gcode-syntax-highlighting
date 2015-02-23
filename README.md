@@ -10,9 +10,13 @@ Syntax Definition for Sublime Text that provides highlighting for G code (ISO 69
 Press Ctrl+Shift+P to open the console
 
 Enter:
-	Package Control: Install Package
+``` 
+Package Control: Install Package
+```
 
 Then search for:
-	G code
+``` 
+G code
+```
 
 Install the package, restart Sublime Text, and enjoy!
