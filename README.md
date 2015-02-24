@@ -1,7 +1,7 @@
 # G-code syntax highlighting for Sublime Text
 Syntax Definition for Sublime Text that provides highlighting for G code (ISO 6983, DIN 66025, RS-274)
 
-![Screenshot](/docs/screenshot.png?raw=true)
+![Screenshot](https://raw.githubusercontent.com/themachinist/gcode-syntax-highlighting/master/docs/screenshot.png?raw=true)
 
 # Installation
 
