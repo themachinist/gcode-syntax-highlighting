@@ -26,7 +26,7 @@ patterns:
   name: keyword.operator
   match: (GT|LT|GE|LE|EQ)
 
-- comment: flow control operators: locations
+- comment: flow control operators - locations
   name: markup.italic
   match: (?<=GOTO|DO)\d+
 
@@ -50,11 +50,43 @@ patterns:
   name: support.function
   match: (?<[T]\d+)([T]([\d\.])+)
 
-- comment: positions: alpha component
-  name: markup.bold
-  match: ([XYZABC]{1})(?=([\d\.-])*)
+- comment: positions - alpha component - X
+  name: keyword.positionx
+  match: ([X]{1})(?=([\d\.-])*)
 
-- comment: positions: numeric component
+- comment: positions - alpha component - Y
+  name: keyword.position.
+  match: ([Y]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - Z
+  name: keyword.position.
+  match: ([Z]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - I
+  name: keyword.position.i
+  match: ([I]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - J
+  name: keyword.position.j
+  match: ([J]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - K
+  name: keyword.position.k
+  match: ([K]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - A
+  name: keyword.position.a
+  match: ([A]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - B
+  name: keyword.position.b
+  match: ([B]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - C
+  name: keyword.position.c
+  match: ([C]{1})(?=([\d\.-])*)
+
+- comment: positions - numeric component
   name: constant.numeric
   match: (?<=[XYZABC])([\d\.-])*
 

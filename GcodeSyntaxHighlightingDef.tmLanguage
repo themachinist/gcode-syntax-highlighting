@@ -4,6 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
+		<string>eia</string>
 		<string>nc</string>
 		<string>ngc</string>
 		<string>prg</string>
@@ -47,14 +48,6 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>functions</string>
-			<key>match</key>
-			<string>(ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)</string>
-			<key>name</key>
-			<string>support.function</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>comparison operators</string>
 			<key>match</key>
 			<string>(GT|LT|GE|LE|EQ)</string>
@@ -63,11 +56,19 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>flow control locations</string>
+			<string>flow control operators - locations</string>
 			<key>match</key>
 			<string>(?&lt;=GOTO|DO)\d+</string>
 			<key>name</key>
 			<string>markup.italic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>functions</string>
+			<key>match</key>
+			<string>(ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)</string>
+			<key>name</key>
+			<string>support.function</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -79,11 +80,107 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>positions</string>
+			<string>O &amp; N numberes</string>
 			<key>match</key>
-			<string>([XYZABC]{1})(?=([\d\.-])*)</string>
+			<string>([ON]([\d])+)</string>
 			<key>name</key>
-			<string>markup.bold</string>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Current tool number</string>
+			<key>match</key>
+			<string>([T]([\d\.])+)</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Pre-load tool number</string>
+			<key>match</key>
+			<string>(?&lt;[T]\d+)([T]([\d\.])+)</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - X</string>
+			<key>match</key>
+			<string>([X]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.positionx</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - Y</string>
+			<key>match</key>
+			<string>([Y]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - Z</string>
+			<key>match</key>
+			<string>([Z]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - I</string>
+			<key>match</key>
+			<string>([I]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.i</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - J</string>
+			<key>match</key>
+			<string>([J]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.j</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - K</string>
+			<key>match</key>
+			<string>([K]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.k</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - A</string>
+			<key>match</key>
+			<string>([A]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.a</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - B</string>
+			<key>match</key>
+			<string>([B]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.b</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - C</string>
+			<key>match</key>
+			<string>([C]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.c</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component</string>
+			<key>match</key>
+			<string>(?&lt;=[XYZABC])([\d\.-])*</string>
+			<key>name</key>
+			<string>constant.numeric</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -95,27 +192,11 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>positions</string>
-			<key>match</key>
-			<string>(?&lt;=[XYZABC])([\d\.-])*</string>
-			<key>name</key>
-			<string>constant.numeric</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>feeds &amp; speeds</string>
 			<key>match</key>
 			<string>(?&lt;= )[FS]([\d\.-])+</string>
 			<key>name</key>
 			<string>variable.parameter</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>O &amp; N numberes</string>
-			<key>match</key>
-			<string>([ON]([\d\.-])+)</string>
-			<key>name</key>
-			<string>support.function</string>
 		</dict>
 		<dict>
 			<key>comment</key>
