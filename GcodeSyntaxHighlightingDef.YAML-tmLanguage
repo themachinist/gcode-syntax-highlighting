@@ -2,7 +2,7 @@
 ---
 name: G-code
 scopeName: source.iso6983
-fileTypes: [nc,ngc,prg,mpf]
+fileTypes: [eia,nc,ngc,prg,mpf]
 uuid: e6875107-21f9-449b-bbae-036db969b3d2
 
 patterns:
@@ -22,33 +22,33 @@ patterns:
   name: keyword.control
   match: (IF|THEN|AND|OR|WHILE|GOTO)
 
-- comment: functions
-  name: support.function
-  match: (ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)
-
 - comment: comparison operators
   name: keyword.operator
   match: (GT|LT|GE|LE|EQ)
 
-- comment: flow control locations
+- comment: flow control operators: locations
   name: markup.italic
   match: (?<=GOTO|DO)\d+
+
+- comment: functions
+  name: support.function
+  match: (ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)
 
 - comment: variables
   name: variable.other
   match: (#\d+)
 
-- comment: positions
+- comment: positions: alpha component
   name: markup.bold
   match: ([XYZABC]{1})(?=([\d\.-])*)
+
+- comment: positions: numeric component
+  name: constant.numeric
+  match: (?<=[XYZABC])([\d\.-])*
 
 - comment: arc positions
   name: markup.italic
   match: ([IJK])(?=([\d\.-])*)
-
-- comment: positions
-  name: constant.numeric
-  match: (?<=[XYZABC])([\d\.-])*
 
 - comment: feeds & speeds
   name: variable.parameter
