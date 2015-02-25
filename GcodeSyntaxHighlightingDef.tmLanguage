@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>nc</string>
+		<string>ngc</string>
 		<string>prg</string>
 		<string>mpf</string>
 	</array>
