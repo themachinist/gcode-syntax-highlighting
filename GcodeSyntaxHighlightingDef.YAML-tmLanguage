@@ -2,7 +2,7 @@
 ---
 name: G-code
 scopeName: source.iso6983
-fileTypes: [nc,prg,mpf]
+fileTypes: [nc,ngc,prg,mpf]
 uuid: e6875107-21f9-449b-bbae-036db969b3d2
 
 patterns:
