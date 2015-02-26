@@ -6,13 +6,6 @@ fileTypes: [eia,nc,ngc,prg,mpf]
 uuid: e6875107-21f9-449b-bbae-036db969b3d2
 
 patterns:
-- comment: g commands
-  name: support.variable
-  match: G\d+
-
-- comment: m commands
-  name: support.constant
-  match: M\d+
 
 - comment: comments
   name: comment.line
@@ -20,7 +13,7 @@ patterns:
 
 - comment: flow control operators
   name: keyword.control
-  match: (IF|THEN|AND|OR|WHILE|GOTO)
+  match: (IF|THEN|AND|OR|WHILE|GOTO|G65|M98|M97)
 
 - comment: comparison operators
   name: keyword.operator
@@ -29,6 +22,10 @@ patterns:
 - comment: flow control operators - locations
   name: markup.italic
   match: (?<=GOTO|DO)\d+
+
+- comment: arithmetic operators
+  name: keyword.operator
+  match: (\+|\-|\*|\/)
 
 - comment: functions
   name: support.function
@@ -39,16 +36,16 @@ patterns:
   match: (#\d+)
 
 - comment: O & N numberes
-  name: support.function
+  name: storage.type.programnum
   match: ([ON]([\d])+)
 
-- comment: Current tool number
-  name: support.function
-  match: ([T]([\d\.])+)
-
 - comment: Pre-load tool number
-  name: support.function
+  name: support.function.tool2
   match: (?<=([T\d\. ]))([T]([\d\.])+)
+
+- comment: Current tool number
+  name: support.function.tool1
+  match: ([T]([\d\.])+)
 
 - comment: positions - alpha component - X
   name: keyword.position.x.identifier
@@ -154,7 +151,27 @@ patterns:
   name: variable.parameter
   match: (?<= )[FS]([\d\.-])+
 
+- comment: spindle actuation 
+  name: variable.parameter
+  match: (M(20|30){0,1}(3|4|5)(?!\d))
+
 - comment: brackets
   name: string.interpolated
   match: (\[|\])
+
+- comment: work coordinates
+  name: support.function.wcs.write
+  match: ^.*G10.*$
+
+- comment: work coordinates
+  name: support.function.wcs
+  match: (G(1){0,1}(5)(2|3|4|5|6|7|8|9)(\.5){0,1})
+
+- comment: tool change
+  name: support.function.tool.change
+  match: (M6)
+
+- comment: g codes - movement
+  name: support.function.movement
+  match: (G[0123] )
 ...

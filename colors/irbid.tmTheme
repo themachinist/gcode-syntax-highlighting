@@ -24,7 +24,7 @@
 				<key>invisibles</key>
 				<string>#FFFFFF26</string>
 				<key>lineHighlight</key>
-				<string>#9E6ACE</string>
+				<string>#fcfcfc</string>
 				<key>selection</key>
 				<string>#4c4a43</string>
 			</dict>
@@ -36,7 +36,7 @@
 		<!-- Comments -->
 		<dict>
 			<key>name</key>
-			<string>Constant</string>
+			<string>Comments</string>
 			<key>scope</key>
 			<string>comment</string>
 			<key>settings</key>
@@ -62,33 +62,53 @@
 				<string>#9E6ACE</string>
 			</dict>
 		</dict>
+		
+		<!-- Keywords -->
 		<dict>
 			<key>name</key>
-			<string>Constant</string>
+			<string>Keyword</string>
 			<key>scope</key>
-			<string>constant.numeric</string>
+			<string>keyword.operator</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#258CFF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Constant</string>
-			<key>scope</key>
-			<string>constant</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
-				<string>#258CFF</string>
+				<string>#04E827</string>
 			</dict>
 		</dict>
 
+		<!-- Storage -->
+		<dict>
+			<key>name</key>
+			<string>interpolated strings</string>
+			<key>scope</key>
+			<string>string.interpolated</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#04D0D1</string>
+			</dict>
+		</dict>
+
+		<!-- Storage -->
+		<dict>
+			<key>name</key>
+			<string>type storage</string>
+			<key>storage.type</key>
+			<string>variable</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#dcbeac</string>
+			</dict>
+		</dict>
+
+		<!-- Variables -->
 		<dict>
 			<key>name</key>
 			<string>Variable</string>
@@ -99,10 +119,112 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#acbedc</string>
+				<string>#FFD600</string>
 			</dict>
 		</dict>
 
+		<!-- G code groups -->
+		<dict>
+			<key>name</key>
+			<string>movement g codes</string>
+			<key>scope</key>
+			<string>support.function.movement</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#18B1E8</string>
+			</dict>
+		</dict>
+
+		<!-- program number -->
+		<dict>
+			<key>name</key>
+			<string></string>
+			<key>scope</key>
+			<string>storage.type.programid</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#ef9</string>
+			</dict>
+		</dict>
+
+		<!-- Work Coordinates-->
+		<dict>
+			<key>name</key>
+			<string>Work Coordinates</string>
+			<key>scope</key>
+			<string>support.function.wcs</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#0EE8AB</string>
+				<key>background</key>
+				<string>#0EE8AB37</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>G10</string>
+			<key>scope</key>
+			<string>support.function.wcs.write</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#acbedc</string>
+				<key>background</key>
+				<string>#0EE8AB3a</string>
+			</dict>
+		</dict>
+
+		<!-- Tool numbers -->
+		<dict>
+			<key>name</key>
+			<string>Tool loading into spindle</string>
+			<key>scope</key>
+			<string>support.function.tool1</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#cc3161</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>tool loading into gripper</string>
+			<key>scope</key>
+			<string>support.function.tool2</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#ac6181</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Constant</string>
+			<key>scope</key>
+			<string>support.function.tool.change</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#fc91c1</string>
+			</dict>
+		</dict>
 
 		<!-- Axis definitions -->
 
