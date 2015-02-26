@@ -98,7 +98,7 @@
 			<key>comment</key>
 			<string>Pre-load tool number</string>
 			<key>match</key>
-			<string>(?&lt;[T]\d+)([T]([\d\.])+)</string>
+			<string>(?&lt;=([T\d\. ]))([T]([\d\.])+)</string>
 			<key>name</key>
 			<string>support.function</string>
 		</dict>
@@ -108,7 +108,7 @@
 			<key>match</key>
 			<string>([X]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.positionx</string>
+			<string>keyword.position.x.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -116,7 +116,7 @@
 			<key>match</key>
 			<string>([Y]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.</string>
+			<string>keyword.position.y.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -124,7 +124,7 @@
 			<key>match</key>
 			<string>([Z]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.</string>
+			<string>keyword.position.z.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -132,7 +132,7 @@
 			<key>match</key>
 			<string>([I]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.i</string>
+			<string>keyword.position.i.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -140,7 +140,7 @@
 			<key>match</key>
 			<string>([J]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.j</string>
+			<string>keyword.position.j.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -148,7 +148,7 @@
 			<key>match</key>
 			<string>([K]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.k</string>
+			<string>keyword.position.k.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -156,7 +156,7 @@
 			<key>match</key>
 			<string>([A]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.a</string>
+			<string>keyword.position.a.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -164,7 +164,7 @@
 			<key>match</key>
 			<string>([B]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.b</string>
+			<string>keyword.position.b.identifier</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -172,7 +172,127 @@
 			<key>match</key>
 			<string>([C]{1})(?=([\d\.-])*)</string>
 			<key>name</key>
-			<string>keyword.position.c</string>
+			<string>keyword.position.c.identifier</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - U</string>
+			<key>match</key>
+			<string>([U]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.u.identifier</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - V</string>
+			<key>match</key>
+			<string>([V]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.v.identifier</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - alpha component - W</string>
+			<key>match</key>
+			<string>([W]{1})(?=([\d\.-])*)</string>
+			<key>name</key>
+			<string>keyword.position.w.identifier</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - X</string>
+			<key>match</key>
+			<string>(?&lt;=X)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.x.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - Y</string>
+			<key>match</key>
+			<string>(?&lt;=Y)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.y.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - Z</string>
+			<key>match</key>
+			<string>(?&lt;=Z)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.z.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - I</string>
+			<key>match</key>
+			<string>(?&lt;=I)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.i.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - J</string>
+			<key>match</key>
+			<string>(?&lt;=J)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.j.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - K</string>
+			<key>match</key>
+			<string>(?&lt;=K)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.k.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - A</string>
+			<key>match</key>
+			<string>(?&lt;=A)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.a.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - B</string>
+			<key>match</key>
+			<string>(?&lt;=B)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.b.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - C</string>
+			<key>match</key>
+			<string>(?&lt;=C)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.c.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - U</string>
+			<key>match</key>
+			<string>(?&lt;=U)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.u.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - V</string>
+			<key>match</key>
+			<string>(?&lt;=V)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.v.value</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>positions - numeric component - W</string>
+			<key>match</key>
+			<string>(?&lt;=W)([\d\.-])*</string>
+			<key>name</key>
+			<string>keyword.position.w.value</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -181,14 +301,6 @@
 			<string>(?&lt;=[XYZABC])([\d\.-])*</string>
 			<key>name</key>
 			<string>constant.numeric</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>arc positions</string>
-			<key>match</key>
-			<string>([IJK])(?=([\d\.-])*)</string>
-			<key>name</key>
-			<string>markup.italic</string>
 		</dict>
 		<dict>
 			<key>comment</key>

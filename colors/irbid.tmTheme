@@ -16,7 +16,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#1c1c1c</string>
+				<string>#2c2c2c</string>
 				<key>caret</key>
 				<string>#FFFFFF</string>
 				<key>foreground</key>
@@ -24,11 +24,71 @@
 				<key>invisibles</key>
 				<string>#FFFFFF26</string>
 				<key>lineHighlight</key>
-				<string>#00000059</string>
+				<string>#9E6ACE</string>
 				<key>selection</key>
-				<string>#B36539BF</string>
+				<string>#4c4a43</string>
 			</dict>
 		</dict>
+
+
+		<!-- Default Scopes -->
+		
+		<!-- Comments -->
+		<dict>
+			<key>name</key>
+			<string>Constant</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#A1D5E8b0</string>
+			</dict>
+		</dict>
+
+		<!-- Constants -->
+		<dict>
+			<key>name</key>
+			<string>Constant</string>
+			<key>scope</key>
+			<string>constant</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#9E6ACE</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Constant</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#258CFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Constant</string>
+			<key>scope</key>
+			<string>constant</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#258CFF</string>
+			</dict>
+		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>Variable</string>
@@ -43,6 +103,7 @@
 			</dict>
 		</dict>
 
+
 		<!-- Axis definitions -->
 
 		<!-- Identifier -->
@@ -50,7 +111,7 @@
 			<key>name</key>
 			<string>X-axis</string>
 			<key>scope</key>
-			<string>keyword.position.x</string>
+			<string>keyword.position.x.identifier</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -63,7 +124,7 @@
 			<key>name</key>
 			<string>Y-axis</string>
 			<key>scope</key>
-			<string>keyword.position.y</string>
+			<string>keyword.position.y.identifier</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -76,7 +137,7 @@
 			<key>name</key>
 			<string>Z-axis</string>
 			<key>scope</key>
-			<string>keyword.position.z</string>
+			<string>keyword.position.z.identifier</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -89,7 +150,7 @@
 			<key>name</key>
 			<string>Arc Center X</string>
 			<key>scope</key>
-			<string>keyword.center.x</string>
+			<string>keyword.position.i.identifier</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -102,7 +163,7 @@
 			<key>name</key>
 			<string>Arc Center Y</string>
 			<key>scope</key>
-			<string>keyword.center.y</string>
+			<string>keyword.position.j.identifier</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -115,13 +176,91 @@
 			<key>name</key>
 			<string>Arc Center Z</string>
 			<key>scope</key>
-			<string>keyword.center.z</string>
+			<string>keyword.position.k.identifier</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
 				<string>#16E836</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>A-axis</string>
+			<key>scope</key>
+			<string>keyword.position.a.identifier</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#3EFF18</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>B-axis</string>
+			<key>scope</key>
+			<string>keyword.position.b.identifier</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#7CE80A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C-axis</string>
+			<key>scope</key>
+			<string>keyword.position.c.identifier</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#DEFF0B</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>X-axis incremental</string>
+			<key>scope</key>
+			<string>keyword.position.u.identifier</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#258CFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Y-axis incremental</string>
+			<key>scope</key>
+			<string>keyword.position.v.identifier</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#22B4E8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Z-axis incremental</string>
+			<key>scope</key>
+			<string>keyword.position.w.identifier</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#32FFFF</string>
 			</dict>
 		</dict>
 
@@ -130,80 +269,160 @@
 			<key>name</key>
 			<string>X-axis</string>
 			<key>scope</key>
-			<string>keyword.position.x</string>
+			<string>keyword.position.x.value</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#258CFF</string>
+				<string>#B1D6FFb0</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Y-axis</string>
 			<key>scope</key>
-			<string>keyword.position.y</string>
+			<string>keyword.position.y.value</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#22B4E8</string>
+				<string>#A1D5E8b0</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Z-axis</string>
 			<key>scope</key>
-			<string>keyword.position.z</string>
+			<string>keyword.position.z.value</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#32FFFF</string>
+				<string>#BEFFFFb0</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Arc Center X</string>
 			<key>scope</key>
-			<string>keyword.center.x</string>
+			<string>keyword.position.i.value</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#22E8B0</string>
+				<string>#A1E8D4b0</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Arc Center Y</string>
 			<key>scope</key>
-			<string>keyword.center.y</string>
+			<string>keyword.position.j.value</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#25FF84</string>
+				<string>#B1FFD3b0</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Arc Center Z</string>
 			<key>scope</key>
-			<string>keyword.center.z</string>
+			<string>keyword.position.k.value</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#16E836</string>
+				<string>#95E8A2b0</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>A-axis</string>
+			<key>scope</key>
+			<string>keyword.position.a.value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#B3FFA4b0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>B-axis</string>
+			<key>scope</key>
+			<string>keyword.position.b.value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BAE88A90</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C-axis</string>
+			<key>scope</key>
+			<string>keyword.position.c.value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F1FF9790</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>X-axis incremental</string>
+			<key>scope</key>
+			<string>keyword.position.u.value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#B1D6FFb0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Y-axis incremental</string>
+			<key>scope</key>
+			<string>keyword.position.v.value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#A1D5E8b0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Z-axis incremental</string>
+			<key>scope</key>
+			<string>keyword.position.w.value</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#BEFFFFb0</string>
+			</dict>
+		</dict>
+
+
 	</array>
 	<key>uuid</key>
 	<string>06CD1FB2-A00A-4F8C-97B2-60E131980454</string>

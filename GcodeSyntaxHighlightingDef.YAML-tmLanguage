@@ -48,51 +48,107 @@ patterns:
 
 - comment: Pre-load tool number
   name: support.function
-  match: (?<[T]\d+)([T]([\d\.])+)
+  match: (?<=([T\d\. ]))([T]([\d\.])+)
 
 - comment: positions - alpha component - X
-  name: keyword.positionx
+  name: keyword.position.x.identifier
   match: ([X]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - Y
-  name: keyword.position.
+  name: keyword.position.y.identifier
   match: ([Y]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - Z
-  name: keyword.position.
+  name: keyword.position.z.identifier
   match: ([Z]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - I
-  name: keyword.position.i
+  name: keyword.position.i.identifier
   match: ([I]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - J
-  name: keyword.position.j
+  name: keyword.position.j.identifier
   match: ([J]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - K
-  name: keyword.position.k
+  name: keyword.position.k.identifier
   match: ([K]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - A
-  name: keyword.position.a
+  name: keyword.position.a.identifier
   match: ([A]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - B
-  name: keyword.position.b
+  name: keyword.position.b.identifier
   match: ([B]{1})(?=([\d\.-])*)
 
 - comment: positions - alpha component - C
-  name: keyword.position.c
+  name: keyword.position.c.identifier
   match: ([C]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - U
+  name: keyword.position.u.identifier
+  match: ([U]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - V
+  name: keyword.position.v.identifier
+  match: ([V]{1})(?=([\d\.-])*)
+
+- comment: positions - alpha component - W
+  name: keyword.position.w.identifier
+  match: ([W]{1})(?=([\d\.-])*)
+
+- comment: positions - numeric component - X
+  name: keyword.position.x.value
+  match: (?<=X)([\d\.-])*
+
+- comment: positions - numeric component - Y
+  name: keyword.position.y.value
+  match: (?<=Y)([\d\.-])*
+
+- comment: positions - numeric component - Z
+  name: keyword.position.z.value
+  match: (?<=Z)([\d\.-])*
+
+- comment: positions - numeric component - I
+  name: keyword.position.i.value
+  match: (?<=I)([\d\.-])*
+
+- comment: positions - numeric component - J
+  name: keyword.position.j.value
+  match: (?<=J)([\d\.-])*
+
+- comment: positions - numeric component - K
+  name: keyword.position.k.value
+  match: (?<=K)([\d\.-])*
+
+- comment: positions - numeric component - A
+  name: keyword.position.a.value
+  match: (?<=A)([\d\.-])*
+
+- comment: positions - numeric component - B
+  name: keyword.position.b.value
+  match: (?<=B)([\d\.-])*
+
+- comment: positions - numeric component - C
+  name: keyword.position.c.value
+  match: (?<=C)([\d\.-])*
+
+- comment: positions - numeric component - U
+  name: keyword.position.u.value
+  match: (?<=U)([\d\.-])*
+
+- comment: positions - numeric component - V
+  name: keyword.position.v.value
+  match: (?<=V)([\d\.-])*
+
+- comment: positions - numeric component - W
+  name: keyword.position.w.value
+  match: (?<=W)([\d\.-])*
 
 - comment: positions - numeric component
   name: constant.numeric
   match: (?<=[XYZABC])([\d\.-])*
-
-- comment: arc positions
-  name: markup.italic
-  match: ([IJK])(?=([\d\.-])*)
 
 - comment: feeds & speeds
   name: variable.parameter
