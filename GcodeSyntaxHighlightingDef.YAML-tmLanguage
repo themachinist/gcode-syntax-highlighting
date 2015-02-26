@@ -23,10 +23,6 @@ patterns:
   name: markup.italic
   match: (?<=GOTO|DO)\d+
 
-- comment: arithmetic operators
-  name: keyword.operator
-  match: (\+|\-|\*|\/)
-
 - comment: functions
   name: support.function
   match: (ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)
@@ -142,10 +138,6 @@ patterns:
 - comment: positions - numeric component - W
   name: keyword.position.w.value
   match: (?<=W)([\d\.-])*
-
-- comment: positions - numeric component
-  name: constant.numeric
-  match: (?<=[XYZABC])([\d\.-])*
 
 - comment: feeds & speeds
   name: variable.parameter

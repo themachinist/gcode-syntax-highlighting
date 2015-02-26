@@ -48,14 +48,6 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>arithmetic operators</string>
-			<key>match</key>
-			<string>(\+|\-|\*|\/)</string>
-			<key>name</key>
-			<string>keyword.operator</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>functions</string>
 			<key>match</key>
 			<string>(ABS|ACOS|ASIN|ATAN|COS|LN|EXP|FIX|FUP|MOD|ROUND|SQRT|SIN|TAN)</string>
@@ -285,14 +277,6 @@
 			<string>(?&lt;=W)([\d\.-])*</string>
 			<key>name</key>
 			<string>keyword.position.w.value</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>positions - numeric component</string>
-			<key>match</key>
-			<string>(?&lt;=[XYZABC])([\d\.-])*</string>
-			<key>name</key>
-			<string>constant.numeric</string>
 		</dict>
 		<dict>
 			<key>comment</key>
