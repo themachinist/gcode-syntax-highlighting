@@ -1,0 +1,11 @@
+[
+    {
+        "caption": "G-code",
+        "id": "gcode",
+        "children":
+        [
+            { "command": "show_only_comments" },
+            { "command": "show_program_outline" }
+        ]
+    }
+]

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"merge",
+				"mergeAdjacentRegionsLeftToRight"
+			],
+			[
 				"deselec",
 				"deselectAllListItems"
 			],
@@ -20,50 +24,55 @@
 	"buffers":
 	[
 		{
-			"contents": "( 0000 )\n( MAZAK INTEGREX-IVS )\n( ESPRIT - 2014 )\n( I:\\B4 MASS MACHINE SHOP\\SMITTEN VENTURES\\03-0088-E\\PROGRAMS\\03-0088-E- SHAFT, BEATER DRIVE.ESP )\n(2/26/2015 9:50:39 AM)\n \n(******************** TOOL LIST ********************)\n(T001.01 | C TURNING DIAMOND HOLDER)\n(T001.01 | C TURNING DIAMOND HOLDER)\n(T001.01 | C TURNING DIAMOND HOLDER)\n(T005.01 | V PROFILE TURNING)\n(T010.01 | D 1/2 ID BORING)\n(T012.02 | INSERTABLE GROOVING TOOL)\n(T012.02 | INSERTABLE GROOVING TOOL)\n(T013.01 | CUT OFF 0°)\n(T019    | 3/16EM)\n(T021    | .250 CHAMFER MILL)\n(T025    | .25 NC SPOT)\n(T028    | .504 REAMER)\n(T032    | 1/2 DRILL)\n(***************************************************)\n \nG0 G18 G20 G40 G80 G97 G99\nG53.5\n \n#9101=2.6791 (ZOFFSET-G53.5)\n#500=0 (ENTER B DISTANCE FROM HD2 COLLET/JAWS TO Z ZERO ON HD1 AS ABSOLUTE VALUE)\n#501=[ABS[#500]+#9101+1.4] ( USED FOR G53.5 VALUE ON SUB SPINDLE OPERATIONS )\n#502=0 (PHASE ADJUSTMENT FOR HD2 CAXIS IN PICKUP)\n \nN1 (ROUGH FACE)\nG123.1\nM901\nM202\nT001.01 T012 M6 (C TURNING DIAMOND HOLDER)\nG97 S829 M4 R1\nM248\nM250\nG0 B45.\nM251\nG53.5\nM153\nG0 Z.0091 Y0\nX1.3825\nG50 S1600 R1\nG96 S300 M4 R1\nG1 G99 X.0087 F.007\nZ.0871\nG0 X1.3825\nZ-.0009\nG1 X.0087\nZ.0091\nG0 X1.32\nZ0\nG96 S982 M4 R1\nG1 X.0087 F.005\nZ.125\n(ROUGH OD)\nG96 S320 M4 R1\nG0 X1.1025 Z.0608\nG1 Z-3.2742 F.008\nX1.3025\nG0 X1.3\nZ.1\n(FINISH 1\" DIAMETER)\nG96 S380 M4 R1\nX1.0625 Z.0608\nG1 Z-3.2742 F.005\nX1.3125\nG0 X1.3\nZ.1\nG97\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM1\n \nN2 (GROOVING)\nG123.1\nM901\nM202\nT012.02 T001 M6 (INSERTABLE GROOVING TOOL)\nG97 S611 M3 R1\nM248\nM250\nG0 B90.\nM251\nG53.5\nM8\nG0 Z-1.2943 Y0\nX1.25\nG50 S1600 R1\nG96 S200 M3 R1\nG1 G99 X.8105 F.0025\nX1.25\n(GROOVING)\nG0 Z-1.6933\nG1 X.8105\nX1.25\nG97\nM9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM1\n \nN3 (PRE-FINISH DATUM D)\nG123.1\nM901\nM202\nT001.01 T005 M6 (C TURNING DIAMOND HOLDER)\nG97 S1371 M4 R1\nM248\nM250\nG0 B45.\nM251\nG53.5\nM153\nG0 Z.0842 Y0\nX.947\nG50 S1600 R1\nG96 S340 M4 R1\nG1 G99 Z-1.2935 F.007\nX1.0625\nG97\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM1\n \nN4 (PRE-FINISH DATUM A)\nG123.1\nM901\nM202\nT005.01 T025 M6 (V PROFILE TURNING)\nG97 S1031 M3 R1\nM248\nM250\nG0 B90.\nM251\nG53.5\nM153\nG0 Z-1.684 Y0\nX1.\nG50 S1600 R1\nG96 S270 M3 R1\nG1 G99 X.8795 F.0042\nZ-3.239\nX1.\nG97\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM5\nM1\n \nN5 (SPOT)\nG122.1\nM901\nM200\nT025 T032 M6 (.25 NC SPOT)\nG97 S764 M203\nM248\nM250\nG0 B0\nM251\nG53.5\nM8\nM212\nG0 C0.\nM210\nG0 Z.1\nX0 Y0\nG83 G98 X0 Z-.125 Q.225 F3.82 M210\nG80\nM9\nG0 G28 U0 V0\nG28 W0\nM205\nM1\n \nN6 (DRILL)\nG122.1\nM901\nM200\nT032 T028 M6 (1/2 DRILL)\nG97 S344 M203\nM248\nM250\nG0 B0\nM251\nG53.5\nM8\nM212\nG0 C0.\nM210\nG0 Z.1\nX0 Y0\nG83 G98 X0 Z-3.0041 Q.11 F1.62 M210\nG80\nM9\nG0 G28 U0 V0\nG28 W0\nM205\nM1\n \nN7 (REAM)\nG122.1\nM901\nM200\nT028 T019 M6 (.504 REAMER)\nG97 S417 M203\nM248\nM250\nG0 B0\nM251\nG53.5\nM8\nM212\nG0 C0.\nM210\nG0 Z.1\nX0 Y0\nG85 G98 X0 Z-2.8539 F1.67 M210\nG80\nM9\nG0 G28 U0 V0\nG28 W0\nM205\nM1\n \nN8 (WRAP MILLING)\nG122.1\nM901\nM200\nT019 T021 M6 (3/16EM)\n(H35AL-R-30187)\nG97 S4278 M203\nM248\nM250\nG0 B90.\nM251\nG53.5\nM153\nM212\nG0 C226.068\nM211\nG0 Z.1814 Y0\nX.5141\nG98\nG19 W0 H0\nG7.1 C.4375\nG0 C-133.932\nG1 X.1999 F11.55\nG41 Z.2558 C-147.829 D19. F7.7\nZ.2211 C-150.33\nZ.1825 C-151.227\nZ.1439 C-150.43\nZ.1089 C-148.018\nZ.0809 C-144.228\nX.2 Z.0672 C-141.653 F11.55\nZ.0662 C-141.474 F7.7\nX.2002 Z.0521 C-138.931 F11.55\nZ.0511 C-138.761 F7.7\nX.2004 Z.0368 C-136.249 F11.55\nZ.0359 C-136.089 F7.7\nX.2007 Z.0212 C-133.608 F11.55\nZ.0204 C-133.458 F7.7\nX.201 Z.0055 C-131.007 F11.55\nZ.0046 C-130.868 F7.7\nX.2014 Z-.0104 C-128.445 F11.55\nZ-.0112 C-128.317 F7.7\nX.2017 Z-.0265 C-125.921 F11.55\nZ-.0273 C-125.805 F7.7\nX.202 Z-.0427 C-123.434 F11.55\nZ-.0434 C-123.33 F7.7\nX.2022 Z-.0591 C-120.981 F11.55\nZ-.0597 C-120.889 F7.7\nX.2023 Z-.0755 C-118.56 F11.55\nZ-.0943 C-116.381 F7.7\nX.2009 Z-.0954 C-116.287 F11.55\nZ-.1215 C-114.63 F7.7\nZ-.15 C-114.062\nZ-.5024\nZ-.5062 C-114.035\nX.201 Z-.5085 C-114.01 F11.55\nZ-.509 C-113.999\nX.2011 Z-.5096 C-113.979\nX.2013 Z-.511 C-113.913\nX.2014 Z-.5131 C-113.797\nX.2016 Z-.5147 C-113.688\nX.2017 Z-.5163 C-113.563\nX.2019 Z-.5178 C-113.422\nX.2022 Z-.5195 C-113.241\nX.2023 Z-.5213 C-113.018\nX.2025 Z-.5229 C-112.798\nX.2027 Z-.5243 C-112.564\nX.2028 Z-.5257 C-112.318\nX.2031 Z-.5269 C-112.061\nX.2033 Z-.5279 C-111.813\nX.2036 Z-.529 C-111.468\nX.2038 Z-.5299 C-111.137\nX.2039 Z-.5306 C-110.819\nX.204\nC-110.769\nZ-.5308 C-110.528\nX.2041 Z-.5313 C-109.549\nC-107.5 F7.7\nC-105.\nC-102.5\nC-100.\nC-97.5\nC-95.\nC-92.5\nC-90.\nC-87.5\nC-85.\nC-82.5\nC-80.\nC-77.5\nC-75.\nC-72.5\nC-70.\nC-67.5\nC-65.\nC-62.5\nC-60.\nC-57.5\nC-55.\nC-52.5\nC-50.\nC-47.5\nC-45.339\nZ-.5311 C-44.777 F11.55\nZ-.5309 C-44.404\nZ-.5307 C-44.259\nX.2039 Z-.5304 C-44.102\nX.2038 Z-.5299 C-43.851\nX.2036 Z-.529 C-43.524\nX.2034 Z-.5281 C-43.26\nX.2033 Z-.5271 C-43.\nX.203 Z-.526 C-42.748\nX.2028 Z-.5247 C-42.505\nX.2026 Z-.5233 C-42.262\nX.2024 Z-.5218 C-42.041\nX.2023 Z-.5201 C-41.834\nX.2021 Z-.5184 C-41.643\nX.2019 Z-.5165 C-41.467\nX.2017 Z-.515 C-41.338\nX.2015 Z-.5129 C-41.197\nX.2013 Z-.5109 C-41.085\nX.2012 Z-.5094 C-41.019\nX.201\nZ-.5082 C-41.002\nX.2009 Z-.5013 C-40.936\nZ-.4715 C-40.243 F7.7\nX.2 Z-.4706 C-40.2 F11.55\nZ-.4426 C-38.215 F7.7\nZ-.4204 C-35.132\nZ-.4062 C-31.253\nZ-.4013 C-26.955\nC-24.505\nC-22.054\nC-19.604\nC-17.153\nC-14.703\nC-12.252\nC-9.802\nC-7.351\nC-4.901\nC-2.45\nC-.344 F11.55\nX.1999 Z-.401 C.248\nX.1998 Z-.4008 C.706\nX.1997 Z-.4007 C.796\nX.1995 Z-.4005 C.95\nX.1993 Z-.4002 C1.104\nX.199 Z-.3997 C1.298\nX.1987 Z-.3985 C1.731\nX.1983 Z-.3974 C2.041\nX.198 Z-.3962 C2.341\nX.1976 Z-.3948 C2.631\nX.1971 Z-.3933 C2.908\nX.1967 Z-.3916 C3.167\nX.1962 Z-.3898 C3.411\nX.1959 Z-.388 C3.626\nX.1955 Z-.3861 C3.82\nX.1951 Z-.3841 C3.991\nX.1948 Z-.3821 C4.14\nX.1944 Z-.3801 C4.258\nX.1941 Z-.3793 C4.3\nX.1938 Z-.3781 C4.348\nX.1936 Z-.3768 C4.383\nX.1934 Z-.376 C4.399\nX.1933 Z-.3751 C4.406\nZ-.3743 C4.404\nX.1934 Z-.3735 C4.393\nX.1936 Z-.3727 C4.373\nX.194 Z-.3715 C4.332\nX.1943 Z-.3695 C4.242\nX.1946 Z-.3679 C4.145\nX.195 Z-.3662 C4.028\nX.1953 Z-.3646 C3.892\nX.1957 Z-.3628 C3.717\nX.1962 Z-.3606 C3.457\nX.1965 Z-.3587 C3.203\nX.197 Z-.3569 C2.929\nX.1974 Z-.3553 C2.634\nX.1979 Z-.3535 C2.267\nX.1983 Z-.3524 C1.989\nX.1986 Z-.3514 C1.685\nX.199 Z-.3505 C1.374\nX.1993 Z-.3499 C1.135\nX.1995 Z-.3498 C1.082\nX.1996 Z-.3496 C.957\nX.1997 Z-.3494 C.638\nX.2 Z-.3488 C-.521\nC-2.5\nC-5. F7.7\nC-7.5\nC-10.\nC-12.5\nC-15.\nC-17.501\nC-20.001\nC-22.501\nC-25.001\nC-27.501\nC-30.001\nC-32.501\nC-35.001\nC-37.501\nC-40.001\nC-42.501\nC-44.647 F11.55\nX.1999 Z-.349 C-45.242\nX.1998 Z-.3492 C-45.71\nX.1997 Z-.3493 C-45.8\nX.1995 Z-.3495 C-45.954\nX.1992 Z-.3498 C-46.108\nX.1989 Z-.3503 C-46.304\nX.1986 Z-.3515 C-46.736\nX.1983 Z-.3526 C-47.046\nX.1979 Z-.3538 C-47.345\nX.1975 Z-.3552 C-47.634\nX.1971 Z-.3567 C-47.91\nX.1966 Z-.3584 C-48.171\nX.1962 Z-.3602 C-48.418\nX.1958 Z-.3621 C-48.639\nX.1955 Z-.3641 C-48.839\nX.1951 Z-.3661 C-49.016\nX.1947 Z-.3682 C-49.171\nX.1945 Z-.37 C-49.285\nX.1939\nX.1938 Z-.3704 C-49.298\nX.1936 Z-.3707 C-49.306\nX.1935 Z-.3723 C-49.336\nX.1933 Z-.3792 C-49.417\nZ-.4101 C-50.141 F7.7\nZ-.4378 C-52.138\nZ-.4598 C-55.217\nZ-.4739 C-59.08\nZ-.4788 C-63.356\nX.2 C-64.063 F11.55\nC-66.387 F7.7\nC-68.712\nC-71.036\nC-73.36\nC-75.685\nC-78.009\nC-80.334\nC-82.658\nC-84.982\nC-87.307\nC-89.631\nC-91.955\nZ-.4738 C-96.253\nZ-.4596 C-100.132\nZ-.4374 C-103.215\nZ-.4094 C-105.2\nX.2009 Z-.4085 C-105.243 F11.55\nZ-.3771 C-105.938 F7.7\nZ-.15\nZ-.1215 C-105.37\nZ-.0954 C-103.713\nX.2023 Z-.0943 C-103.619 F11.55\nZ-.0755 C-101.44 F7.7\nX.2022 Z-.0597 C-99.111 F11.55\nZ-.0591 C-99.019 F7.7\nX.202 Z-.0434 C-96.67 F11.55\nZ-.0427 C-96.566 F7.7\nX.2017 Z-.0273 C-94.195 F11.55\nZ-.0265 C-94.079 F7.7\nX.2014 Z-.0112 C-91.683 F11.55\nZ-.0104 C-91.555 F7.7\nX.201 Z.0046 C-89.132 F11.55\nZ.0055 C-88.993 F7.7\nX.2007 Z.0204 C-86.542 F11.55\nZ.0212 C-86.392 F7.7\nX.2004 Z.0359 C-83.911 F11.55\nZ.0368 C-83.751 F7.7\nX.2002 Z.0511 C-81.239 F11.55\nZ.0521 C-81.069 F7.7\nX.2 Z.0662 C-78.526 F11.55\nZ.0672 C-78.347 F7.7\nX.1999 Z.0809 C-75.772 F11.55\nZ.1089 C-71.982 F7.7\nZ.1439 C-69.57\nZ.1825 C-68.773\nZ.2211 C-69.67\nZ.2558 C-72.171\nG0 G40 Z.1814 C-86.068\nG1 X.5141 F11.55\nG7.1 C0\n(WRAP MILLING)\nM212\nG0 C225.491\nM211\nY0 Z.1758\nG98\nG19 W0 H0\nG7.1 C.4375\nG0 C-134.509\nG1 X.1999\nG41 Z.2502 C-148.405 D19.\nZ.2155 C-150.907\nZ.1769 C-151.803\nZ.1382 C-151.007\nZ.1032 C-148.595\nZ.0753 C-144.805\nX.2 Z.0615 C-142.229\nZ.0606 C-142.063\nX.2002 Z.0465 C-139.52\nZ.0457 C-139.362\nX.2004 Z.0313 C-136.85\nZ.0304 C-136.701\nX.2007 Z.0158 C-134.22\nZ.015 C-134.081\nX.201 Z.0001 C-131.629\nZ-.0007 C-131.5\nX.2014 Z-.0157 C-129.077\nZ-.0165 C-128.958\nX.2017 Z-.0318 C-126.562\nZ-.0325 C-126.454\nX.202 Z-.0479 C-124.083\nZ-.0486 C-123.986\nX.2022 Z-.0642 C-121.637\nZ-.0648 C-121.551\nX.2023 Z-.0806 C-119.223\nZ-.0981 C-117.195\nX.2009 Z-.0992 C-117.101\nZ-.1235 C-115.559\nZ-.15 C-115.031\nZ-.5026\nZ-.5067 C-115.002\nX.201 Z-.5093 C-114.972\nZ-.5103 C-114.949\nX.2011 Z-.5115 C-114.911\nX.2013 Z-.5134 C-114.824\nX.2014 Z-.5159 C-114.684\nX.2016 Z-.518 C-114.546\nX.2017 Z-.52 C-114.387\nX.2019 Z-.5219 C-114.207\nX.2022 Z-.524 C-113.986\nX.2023 Z-.5261 C-113.721\nX.2025 Z-.528 C-113.454\nX.2027 Z-.5298 C-113.17\nX.2028 Z-.5314 C-112.871\nX.2031 Z-.5329 C-112.558\nX.2033 Z-.5341 C-112.251\nX.2036 Z-.5355 C-111.842\nX.2038 Z-.5365 C-111.442\nX.2039 Z-.5374 C-111.033\nX.204\nZ-.5376 C-110.889\nZ-.5378 C-110.606\nX.2041 Z-.5383 C-109.581\nC-107.5\nC-105.\nC-102.5\nC-100.\nC-97.5\nC-95.\nC-92.5\nC-90.\nC-87.5\nC-85.\nC-82.5\nC-80.\nC-77.5\nC-75.\nC-72.5\nC-70.\nC-67.5\nC-65.\nC-62.5\nC-60.\nC-57.5\nC-55.\nC-52.5\nC-50.\nC-47.5\nC-45.316\nZ-.538 C-44.718\nZ-.5378 C-44.295\nZ-.5376 C-44.08\nX.2039 Z-.5372 C-43.853\nX.2038 Z-.5365 C-43.541\nX.2036 Z-.5355 C-43.156\nX.2035 Z-.5344 C-42.831\nX.2033 Z-.5332 C-42.515\nX.203 Z-.5318 C-42.207\nX.2028 Z-.5303 C-41.911\nX.2026 Z-.5285 C-41.619\nX.2024 Z-.5267 C-41.349\nX.2023 Z-.5247 C-41.098\nX.2021 Z-.5226 C-40.865\nX.2019 Z-.5203 C-40.652\nX.2017 Z-.5183 C-40.487\nX.2015 Z-.5158 C-40.313\nX.2013 Z-.5133 C-40.172\nX.2012 Z-.5109 C-40.071\nX.201\nZ-.5106 C-40.062\nZ-.5088 C-40.037\nX.2009 Z-.5016 C-39.968\nZ-.4737 C-39.322\nX.2 Z-.4728 C-39.28\nZ-.4467 C-37.432\nZ-.4261 C-34.564\nZ-.4128 C-30.955\nZ-.4083 C-26.955\nC-24.505\nC-22.054\nC-19.604\nC-17.153\nC-14.703\nC-12.252\nC-9.802\nC-7.351\nC-4.901\nC-2.45\nC-.32\nX.1999 Z-.408 C.309\nX.1998 Z-.4078 C.812\nX.1997 Z-.4076 C.964\nX.1995 Z-.4073 C1.174\nX.1993 Z-.4069 C1.383\nX.199 Z-.4063 C1.629\nX.1987 Z-.4049 C2.117\nX.1983 Z-.4036 C2.488\nX.198 Z-.4022 C2.847\nX.1976 Z-.4005 C3.193\nX.1971 Z-.3987 C3.523\nX.1967 Z-.3967 C3.834\nX.1962 Z-.3945 C4.126\nX.1959 Z-.3923 C4.386\nX.1955 Z-.39 C4.621\nX.1951 Z-.3876 C4.83\nX.1948 Z-.3851 C5.012\nX.1944 Z-.3827 C5.159\nX.1941 Z-.3814 C5.224\nX.1938 Z-.3797 C5.289\nX.1936 Z-.378 C5.338\nX.1934 Z-.3767 C5.363\nX.1933 Z-.3753 C5.375\nZ-.3739 C5.372\nX.1934 Z-.3726 C5.354\nX.1936 Z-.3712 C5.321\nX.194 Z-.3695 C5.261\nX.1943 Z-.3671 C5.15\nX.1946 Z-.3649 C5.024\nX.195 Z-.3628 C4.875\nX.1953 Z-.3607 C4.7\nX.1957 Z-.3586 C4.485\nX.1962 Z-.3559 C4.18\nX.1965 Z-.3536 C3.875\nX.197 Z-.3515 C3.545\nX.1974 Z-.3495 C3.192\nX.1979 Z-.3475 C2.767\nX.1983 Z-.3462 C2.434\nX.1986 Z-.345 C2.075\nX.199 Z-.3439 C1.707\nX.1993 Z-.3432 C1.403\nX.1995 Z-.3429 C1.284\nX.1996 Z-.3427 C1.096\nX.1997 Z-.3424 C.729\nX.2 Z-.3418 C-.485\nC-2.5\nC-5.\nC-7.5\nC-10.\nC-12.5\nC-15.\nC-17.501\nC-20.001\nC-22.501\nC-25.001\nC-27.501\nC-30.001\nC-32.501\nC-35.001\nC-37.501\nC-40.001\nC-42.501\nC-44.672\nX.1999 Z-.342 C-45.303\nX.1998 Z-.3423 C-45.817\nX.1997 Z-.3424 C-45.968\nX.1995 Z-.3427 C-46.178\nX.1992 Z-.3431 C-46.388\nX.1989 Z-.3437 C-46.635\nX.1986 Z-.3451 C-47.123\nX.1983 Z-.3464 C-47.493\nX.1979 Z-.3479 C-47.852\nX.1976 Z-.3495 C-48.197\nX.1971 Z-.3513 C-48.527\nX.1966 Z-.3533 C-48.838\nX.1962 Z-.3555 C-49.133\nX.1958 Z-.3578 C-49.399\nX.1955 Z-.3601 C-49.639\nX.1951 Z-.3626 C-49.854\nX.1947 Z-.3651 C-50.041\nX.1943 Z-.3674 C-50.185\nX.194 Z-.3679 C-50.209\nX.1938 Z-.3687 C-50.24\nX.1936 Z-.3695 C-50.262\nX.1935 Z-.3716 C-50.3\nX.1933 Z-.3789 C-50.385\nZ-.4077 C-51.05\nZ-.4335 C-52.905\nZ-.4541 C-55.771\nZ-.4672 C-59.371\nZ-.4718 C-63.356\nX.2 C-64.063\nC-66.387\nC-68.712\nC-71.036\nC-73.36\nC-75.685\nC-78.009\nC-80.334\nC-82.658\nC-84.982\nC-87.307\nC-89.631\nC-91.955\nZ-.4672 C-95.955\nZ-.4539 C-99.564\nZ-.4333 C-102.432\nZ-.4072 C-104.28\nX.2009 Z-.4063 C-104.322\nZ-.3771 C-104.969\nZ-.15\nZ-.1235 C-104.441\nZ-.0992 C-102.899\nX.2023 Z-.0981 C-102.805\nZ-.0806 C-100.777\nX.2022 Z-.0648 C-98.449\nZ-.0642 C-98.363\nX.202 Z-.0486 C-96.014\nZ-.0479 C-95.917\nX.2017 Z-.0325 C-93.546\nZ-.0318 C-93.438\nX.2014 Z-.0165 C-91.042\nZ-.0157 C-90.923\nX.201 Z-.0007 C-88.5\nZ.0001 C-88.371\nX.2007 Z.015 C-85.919\nZ.0158 C-85.78\nX.2004 Z.0304 C-83.299\nZ.0313 C-83.15\nX.2002 Z.0457 C-80.638\nZ.0465 C-80.48\nX.2 Z.0606 C-77.937\nZ.0615 C-77.771\nX.1999 Z.0753 C-75.195\nZ.1032 C-71.405\nZ.1382 C-68.993\nZ.1769 C-68.197\nZ.2155 C-69.093\nZ.2502 C-71.595\nG0 G40 Z.1758 C-85.491\nG1 X.5141\nG7.1 C0\n(SURFACE SWARF)\nS4278 M203\nM248\nG52.5\nG122.1 G98\n(DATA SETTING FOR EIA TOOL OFFSETS & WORK OFFSETS)\nG10 L12 P[#51999] R[#[610000+#3020]/2]\nG10 L10 P[#51999] R#[600000+#3020]\n(WORK OFFSET G54 DATA SETTING)\nG10 L2 P1 X#50700\nG10 L2 P1 Y0.0\n#3200=3\n#800=[#3223/100000]\nG10 L2 P1 Z[#9101+#800]\nG10 L2 P1 C#9102\nG10 L2 P1 B0.0\nG54\nM250\nG0 B90.\nM153\nM212\nG0 C250.\nG0 G43.4 H#51999 X.9 Y-.2304 Z.1041\nX.0715\nG1 G98 X.0465 F9.63\nX.0215\nX-.0035\nX-.0285\nX-.0204 Y-.2256 Z.089 F19.25\nX-.0125 Y-.2186 Z.0764\nX-.0052 Y-.2105 Z.0665\nX.007 Y-.1951 Z.051\nX.0185 Y-.1794 Z.0353\nX.0291 Y-.1634 Z.0193\nX.039 Y-.1472 Z.0031\nX.0481 Y-.1307 Z-.0134\nX.0563 Y-.114 Z-.0301\nX.0637 Y-.0971 Z-.0469\nX.0673 Y-.0879 Z-.0559\nY-.0629 Z-.0558\nY-.0379\nY-.0129\nY.0121\nY.0371\nY.0621\nX.0672 Y.0871\nX.0671 Y.0886 Z-.0555\nX.0601 Y.1056 Z-.0385\nX.0523 Y.1224 Z-.0217\nX.0437 Y.1389 Z-.0051\nX.0342 Y.1553 Z.0112\nX.0239 Y.1714 Z.0273\nX.0129 Y.1873 Z.0432\nX.001 Y.2028 Z.0588\nX-.0052 Y.2105 Z.0665\nX-.014 Y.2201 Z.0786\nX-.0218 Y.2266 Z.0915\nX-.0285 Y.2304 Z.1041\nG0 X.9\nG49\n(FINISH)\nX-.1219 Y-.1779 Z.9\nX-.1219 Y-.1779 Z.4671\nG1 Z.0256 F20.53\nG17 G41 X-.0777 Y-.2221 D19.\nX-.0663 Y-.2107 Z.0352\nX-.0558 Y-.2002 Z.0438\nX-.045 Y-.1895 Z.052\nX-.0342 Y-.1786 Z.0597\nX-.0232 Y-.1676 Z.0671\nX-.0116 Y-.156 Z.0743\nX.0001 Y-.1444 Z.0811\nX.0119 Y-.1326 Z.0875\nX.0238 Y-.1206 Z.0935\nX.0386 Y-.1058 Z.1003\nX.0535 Y-.0909 Z.1065\nX.0686 Y-.0759 Z.1121\nX.0837 Y-.0607 Z.1171\nG2 X.15 Y-.0333 I.0663 J-.0663\nG1 X.505\nG3 Y.0333 I0 J.0333\nG1 X.15\nG2 X.0837 Y.0607 I0 J.0937\nG1 X.0686 Y.0759 Z.1121\nX.0535 Y.0909 Z.1065\nX.0386 Y.1058 Z.1003\nX.0238 Y.1206 Z.0935\nX.0079 Y.1365 Z.0854\nX-.0077 Y.1522 Z.0766\nX-.0232 Y.1676 Z.0671\nX-.0342 Y.1786 Z.0597\nX-.045 Y.1895 Z.0519\nX-.0557 Y.2002 Z.0437\nX-.0663 Y.2107 Z.0352\nX-.0777 Y.2221 Z.0256\nG40 X-.1219 Y.1779\nZ.4671\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM205\nM1\n \nN9 (CUT FULL CHAMFER)\nG122.1\nM901\nM200\nT021 T012 M6 (.250 CHAMFER MILL)\nG97 S3000 M203\nM248\nM250\nG0 B90.\nM251\nG53.5\nM153\nM212\nG0 C225.606\nM211\nG68.5 X0 Z0 Y0 I0 J1. K0 R90.\nG0 X-.1146 Y0 Z.53\nG1 G98 Z.38 F18.\nX-.1964 H-14.245 F2051.26\nX-.1846 H-1.412 F1682.41\nX-.1716 H-1.158 F1378.4\nX-.1577 H-.913 F1086.57\nX-.1432 H-.654 F778.94\nX-.1283 H-.386 F460.03\nX-.1132 H-.113 F135.12\nX-.0981 H.163 F194.62\nX-.0833 H.436 F518.98\nX-.0689 H.702 F836.18\nX-.0552 H.959 F1141.26\nX-.0423 H1.201 F1429.72\nX-.0305 H1.426 F1697.34\nX-.0201 H1.653 F1968.59\nX.0104 H5.318 F2051.26\nX.0482 H6.203 F1998.74\nX.0925 H6.857 F1944.25\nX.1314 H5.746 F1900.33\nX.513 H.07 F18.3\nX.5232 H.245 F427.3\nX.5331 H.417 F730.82\nX.5425 H.584 F1031.43\nX.5513 H.74 F1325.25\nX.5605 H1.007 F1597.57\nX.5686 H1.123 F1838.12\nX.5755 H1.224 F2062.9\nX.5814 H1.331 F2263.97\nX.5859 H1.399 F2434.15\nX.5887 H1.159 F2557.45\nX.5909 H1.484 F2647.44\nX.5918 H1.511 F2703.49\nH65.312 F2714.\nX.5904 H2.133 F2701.81\nX.5879 H1.486 F2627.01\nX.5849 H1.161 F2529.45\nX.5763 H2.231 F2348.46\nX.5709 H1.018 F2119.48\nX.5631 H1.195 F1933.11\nX.556 H.889 F1737.49\nX.5482 H.77 F1488.\nX.5342 H.978 F1143.06\nX.518 H.634 F679.91\nX.472 F18.\nX.4717 H33.559 F2714.\nX.4696 H2.064 F2681.04\nX.4662 H1.673 F2592.55\nX.46 H1.951 F2452.57\nX.4533 H1.549 F2267.5\nX.4452 H1.424 F2065.77\nX.4351 H1.45 F1869.36\nX.4258 H1.014 F1592.61\nX.4135 H.976 F1262.81\nX.4029 H.58 F925.23\nX.3896 H.443 F585.72\nX.376 H.161 F212.17\nX.364 H-.161 F242.45\nX.3501 H-.443 F558.66\nX.3368 H-.705 F899.43\nX.3244 H-.957 F1236.33\nX.3149 H-.981 F1536.42\nX.3057 H-1.25 F1816.91\nX.2966 H-1.645 F2085.63\nX.2892 H-1.789 F2300.02\nX.2836 H-1.876 F2476.2\nX.2795 H-2.252 F2617.56\nX.278 H-2.31 F2700.93\nH-45.244 F2714.\nX.2791 H-1.825 F2702.82\nX.2819 H-1.79 F2643.35\nX.2894 H-2.677 F2497.44\nX.2996 H-2.249 F2244.68\nX.3133 H-2.107 F1932.59\nX.3296 H-1.636 F1506.96\nX.3391 H-.667 F1148.38\nX.3495 H-.541 F884.33\nX.3689 H-.552 F503.07\nX.3887 H-.012 F20.85\nX.408 H.525 F481.97\nH-38.578 F2714.\nX.1315 F18.\nX.08 H7.616 F1901.34\nX.0428 H5.817 F1953.52\nX.0044 H6.368 F2007.68\nX-.03 H6.134 F2072.77\nH280.738 F2714.\nX-.0307 H2.276 F2711.21\nX-.0334 H2.243 F2669.55\nX-.0379 H2.177 F2591.12\nX-.0441 H2.079 F2474.91\nX-.0519 H1.951 F2322.61\nX-.0613 H1.795 F2136.45\nX-.072 H1.612 F1919.14\nX-.0839 H1.406 F1673.84\nX-.0968 H1.18 F1404.14\nX-.1106 H.936 F1113.99\nX-.125 H.678 F807.61\nX-.1399 H.411 F489.53\nX-.155 H.103 F124.34\nH-18.847 F2714.\nZ.53 F18.\nG69.5\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM205\nM1\n \nN10 (GROOVING)\nG123.1\nM901\nM202\nT012.02 T001 M6 (INSERTABLE GROOVING TOOL)\nG97 S611 M3 R1\nM248\nM250\nG0 B90.\nM251\n\nM8\nG0 Z-1.2943 Y0\nX1.25\nG50 S1600 R1\nG96 S200 M3 R1\nG1 G99 X.8105 F.0025\nX1.25\nG97\nM9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM1\n \nN11 (FINISH OD RELIEF)\nG123.1\nM901\nM202\nT001.01 T010 M6 (C TURNING DIAMOND HOLDER)\nG97 S1600 M4 R1\nM248\nM250\nG0 B45.\nM251\nG53.5\nM153\nG0 Z.1871 Y0\nX.0287\nG50 S1600 R1\nG96 S410 M4 R1\nG1 G99 Z-.0129 F.006\nX.8459\nX.9225 Z-.0513\nZ-.8237\nG3 G18 X.937 Z-.847 I-.034 K-.0234\nG2 X.9995 Z-.8783 I.0313 K0\nG1 X1.062\nG97\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM1\n \nN12 (ROUGH ID)\nG123.1\nM901\nM202\nT010.01 T013 M6 (D 1/2 ID BORING)\nG97 S1600 M3 R1\nM248\nM250\nG0 B0\nM251\nG53.5\nM153\nG0 Z.0814 Y0\nX.569\nG50 S1600 R1\nG96 S270 M3 R1\nG1 G99 X.4854 Z-.1679 F.0042\nZ-.168\nX.4332 Z-.3236\nG0 Z.0631\nX.7923\nG1 X.5988 Z-.0058\nX.5981 Z-.0061\nX.5816 Z-.0119\nX.5656 Z-.0177\nX.555 Z-.0214\nX.5054 Z-.1695\nZ-.1697\nX.4527 Z-.3269\nG0 Z.1\n(FINISH ID RELIEF)\nG50 S2100 R1\nG96 S300 M3 R1\nX.8175 Z.0689\nG1 X.6078 Z-.0058 F.0027\nX.6071 Z-.0061\nX.5906 Z-.0119\nX.5746 Z-.0177\nX.564 Z-.0214\nX.5144 Z-.1695\nZ-.1697\nX.4699 Z-.3023\nG3 G18 X.452 Z-.3087 I-.0077 K.0013\nG1 X.4545 Z-.301\nG0 Z.1\nG97\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM1\n \nN13 (CUTOFF)\nG123.1\nM901\nM202\nT013.01 T001 M6 (CUT OFF 0°)\nG97 S263 M4 R1\nM248\nM250\nG0 B90.\nM251\nG53.5\nM8 M153\nG0 Z-3.26 Y0\nX1.45\nG50 S1600 R1\nG96 S100 M4 R1\nG1 G99 X1.11 F.003\nG0 X1.21\nG1 X.97\nG0 X1.07\nG1 X.83\nG0 X.93\nG1 X.69\nG0 X.79\nG1 X.55\nG0 X.65\nG1 X.41\nG0 X.51\nG1 X.27\nG0 X.37\nG1 X.25\nG0 X1.0159\nZ-3.1544\nG96 S65 M4 R1\nG1 X.8286 Z-3.248 F.0035\nX.13\nG97\nM154 M9\nG0 G28 U0 V0\nG28 W0\nM250\nG28 B0\nM5\nT001 M6\nM30\n",
-			"file": "/I/Machine Data/Integrex 44/03-0088-E_SHAFT_BEATER_DRIVE.eia",
-			"file_size": 19642,
-			"file_write_time": 130694483512284702,
+			"file": "default.sublime-commands",
 			"settings":
 			{
-				"buffer_size": 18460,
+				"buffer_size": 146,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "O1000\n(MY PROGRAM)\n\nN100\nT20 T22 M6\nG90 G54 G0 X0 Y0 S3000 M3\nG43 H1 Z0\nZ.1\nG1 X2.343 Y5.453 F100.\nG1 G41 X4.231 Y5.543\nG2 X4.534 Y5.421 Z.1232 I0.000 J3.322 K0.000 A0.231 B12.2323 C21.213 F32.\nG1 G40 X5.421\nM30\n\n",
+			"file": "folding.py",
 			"settings":
 			{
-				"buffer_size": 213,
+				"buffer_size": 1750,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "GcodeSyntaxHighlightingDef.YAML-tmLanguage",
+			"contents": "O1234 (5AXIS TEST)\n(PROGRAM NAME -  5AXIS TEST   DATE=DD-MM-YY -  10-18-07  TIME=HH:MM -  10:02 )\n(MASTERCAM - X)\n(MCX FILE  -  D:\\MAZAK\\INTEGREX\\WORM GEAR START_BT .MCX )\n(T22 |  1/4 BALL ENDMILL              |  LEN. - 22. |  DIA. - 22.)\n\nG28 U0. Y0. W0.\n\nN1\n(T22 |  1/4 BALL ENDMILL              |  LEN. - 22. |  DIA. - 22.)\n(PENCIL ON WALL SIDE OF FILLET)\n(TOOLPATH GROUP - TOOLPATH GROUP-1)\nG122.1\nM901\nM200\nT22 T26 M6 D022\nG28 U0. V0. W0.\nG97 S2139 M203\nM248\nG52.5 (MAZATROL COORDINATE SYSTEM CANCEL)\nG10 L12 P[#51999] R[#[61000+#3020]/2] (TOOL RADIUS)\nG10 L10 P[#51999] R#[60000+#3020] (TOOL LENGTH)\n(WORK OFFSET G54 DATA SETTING)\nG10 L2 P1 X#50700 (WORK OFFSET G54 X__)\nG10 L2 P1 Y0.0 (WORK OFFSET G54 Y0.0)\nG10 L2 P1 Z[#9101+[-19.6456]] (WORK OFFSET G54 Z__)\n(NOTE* THE [-19.6456 is the \"secret\" Mazak offset entry)\n( which does not appear to be machine specific)\nG10 L2 P1 C#9102 (WORK OFFSET G54 C__)\nG10 L2 P1 B0.0 (WORK OFFSET G54 B0.0)\nG54\nM250 M212\nG98 G0 B94.9704 C55.2616\nM211\nG0 X1.9839 Z-.9227 G43.4 H22\nY.2533\nM8\nX1.8963 Y.2421\nG1 X1.3982 Z-.8794 F10.\nX1.3973 Y.2425 Z-.8746 I2.3424 J3.2342 K4.4353 A5.5999 B94.9723 C55.0629\nX1.3954 Y.2424 Z-.864 C54.5849 B94.9765\nX1.3936 Y.2411 Z-.855 C54.1061 B94.9803\nX1.3709 Z-1.043\nG0 X1.9373 Y.4968\nM9\nG49\nG69.5\nG28 U0. Y0.\nG28 W0. M205\nM01\nM30\n\n",
+			"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
+			"file_size": 1361,
+			"file_write_time": 130748970592787592,
 			"settings":
 			{
-				"buffer_size": 4388,
+				"buffer_size": 1305,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
+			"settings":
+			{
+				"buffer_size": 82685,
 				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 196.0,
+		"height": 150.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"remove",
 				"Package Control: Remove Package"
-			],
-			[
-				"isntall",
-				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"colo",
@@ -103,6 +112,10 @@
 			],
 			[
 				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
 				"Package Control: Install Package"
 			],
 			[
@@ -154,13 +167,17 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 593.0
+		"width": 588.0
 	},
 	"console":
 	{
-		"height": 199.0,
+		"height": 216.0,
 		"history":
 		[
+			"print('\\n'*100)",
+			"os.system('cls')",
+			"clear",
+			"cls",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
 			"quit",
 			"exit",
@@ -183,19 +200,23 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting"
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools"
 	],
 	"file_history":
 	[
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/colors/irbid.tmTheme",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/filter.py",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/plugin/filter.py",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/plugin/default.sublime-commands",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/plugin/Main.sublime-menu",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/default.sublime-commands",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/Main.sublime-menu",
+		"/C/Users/winslow/AppData/Local/Temp/FoldComments/foldcomments.py",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
+		"/H/EMLKTK2014",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/filter.py",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
+		"/C/Winslow/Programming/MTConnect-JS/proxy.php",
+		"/C/Users/winslow/Downloads/I++DME specification document 1.7",
+		"/I/Machine Data/Integrex 44/03-0088-E_SHAFT_BEATER_DRIVE.eia",
+		"/C/Winslow/Programming/G code ST Plugin/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
+		"/C/Winslow/Programming/G code ST Plugin/colors/irbid.tmTheme",
 		"//mazak-44/MC_Machine Programs/03-0088-E_SHAFT_BEATER_DRIVE.eia",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/irbid.tmTheme",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/colors/irbid.tmTheme",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/Color Scheme - Default/Cobalt.tmTheme",
 		"/I/Winslow/Programming/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Installed Packages/GcodeSyntaxHighlightingDef.tmLanguage",
@@ -206,7 +227,6 @@
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/SublimeGit.sublime-settings",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Installed Packages/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
-		"/I/Machine Data/Integrex 44/03-0088-E_SHAFT_BEATER_DRIVE.eia",
 		"/I/Machine Shop/CNC PROGRAMS/Mazak-44 User and Password.txt",
 		"/I/Machine Data/652-0858_B-part-program.PRG",
 		"/I/Manufacturing Data/03-0088-E_SHAFT_BEATER_DRIVE.eia",
@@ -311,10 +331,7 @@
 		"/I/Winslow/Job Listings/CNC Setup Machinist.html",
 		"/I/Winslow/Programming/wikimedia/DiscourseSkin/resources/screen.css",
 		"/I/Winslow/Programming/wikimedia/DiscourseSkin/DiscourseSkin.php",
-		"/I/Winslow/Programming/wikimedia/DiscourseSkin/resources/print.css",
-		"/C/Users/winslow/Downloads/G_NC03_XX_00178V.edz",
-		"/I/Winslow/Programming/wikimedia/BendCalc/bend.html",
-		"/I/Winslow/Programming/WorkInstruction/blah.js"
+		"/I/Winslow/Programming/wikimedia/DiscourseSkin/resources/print.css"
 	],
 	"find":
 	{
@@ -610,24 +627,80 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/I/Machine Data/Integrex 44/03-0088-E_SHAFT_BEATER_DRIVE.eia",
+					"file": "default.sublime-commands",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18460,
+						"buffer_size": 146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17241,
-								17241
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/AAAPackageDev/Syntax Definitions/Sublime Commands.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "folding.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1316,
+								1316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 507.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								952,
+								952
 							]
 						],
 						"settings":
@@ -635,26 +708,27 @@
 							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 15570.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
+					"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 213,
+						"buffer_size": 82685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								59,
-								61
+								411,
+								411
 							]
 						],
 						"settings":
@@ -665,44 +739,9 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "GcodeSyntaxHighlightingDef.YAML-tmLanguage",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4388,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3415,
-								3415
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/AAAPackageDev/Syntax Definitions/Sublime Text Syntax Def (YAML).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1395.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
 					"type": "text"
 				}
-			]
-		},
-		{
-			"sheets":
-			[
 			]
 		}
 	],
@@ -723,18 +762,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.7796875,
 			1.0
 		],
 		"rows":
@@ -772,6 +804,7 @@
 	{
 		"height": 150.0
 	},
+	"pinned_build_system": "",
 	"project": "g-code-highlighting.sublime-project",
 	"replace":
 	{
@@ -781,6 +814,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -789,6 +823,7 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -797,20 +832,21 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 193.0,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
