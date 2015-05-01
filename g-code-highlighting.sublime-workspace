@@ -35,15 +35,12 @@
 			"file": "folding.py",
 			"settings":
 			{
-				"buffer_size": 1750,
+				"buffer_size": 1605,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "O1234 (5AXIS TEST)\n(PROGRAM NAME -  5AXIS TEST   DATE=DD-MM-YY -  10-18-07  TIME=HH:MM -  10:02 )\n(MASTERCAM - X)\n(MCX FILE  -  D:\\MAZAK\\INTEGREX\\WORM GEAR START_BT .MCX )\n(T22 |  1/4 BALL ENDMILL              |  LEN. - 22. |  DIA. - 22.)\n\nG28 U0. Y0. W0.\n\nN1\n(T22 |  1/4 BALL ENDMILL              |  LEN. - 22. |  DIA. - 22.)\n(PENCIL ON WALL SIDE OF FILLET)\n(TOOLPATH GROUP - TOOLPATH GROUP-1)\nG122.1\nM901\nM200\nT22 T26 M6 D022\nG28 U0. V0. W0.\nG97 S2139 M203\nM248\nG52.5 (MAZATROL COORDINATE SYSTEM CANCEL)\nG10 L12 P[#51999] R[#[61000+#3020]/2] (TOOL RADIUS)\nG10 L10 P[#51999] R#[60000+#3020] (TOOL LENGTH)\n(WORK OFFSET G54 DATA SETTING)\nG10 L2 P1 X#50700 (WORK OFFSET G54 X__)\nG10 L2 P1 Y0.0 (WORK OFFSET G54 Y0.0)\nG10 L2 P1 Z[#9101+[-19.6456]] (WORK OFFSET G54 Z__)\n(NOTE* THE [-19.6456 is the \"secret\" Mazak offset entry)\n( which does not appear to be machine specific)\nG10 L2 P1 C#9102 (WORK OFFSET G54 C__)\nG10 L2 P1 B0.0 (WORK OFFSET G54 B0.0)\nG54\nM250 M212\nG98 G0 B94.9704 C55.2616\nM211\nG0 X1.9839 Z-.9227 G43.4 H22\nY.2533\nM8\nX1.8963 Y.2421\nG1 X1.3982 Z-.8794 F10.\nX1.3973 Y.2425 Z-.8746 I2.3424 J3.2342 K4.4353 A5.5999 B94.9723 C55.0629\nX1.3954 Y.2424 Z-.864 C54.5849 B94.9765\nX1.3936 Y.2411 Z-.855 C54.1061 B94.9803\nX1.3709 Z-1.043\nG0 X1.9373 Y.4968\nM9\nG49\nG69.5\nG28 U0. Y0.\nG28 W0. M205\nM01\nM30\n\n",
 			"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
-			"file_size": 1361,
-			"file_write_time": 130748970592787592,
 			"settings":
 			{
 				"buffer_size": 1305,
@@ -55,6 +52,38 @@
 			"settings":
 			{
 				"buffer_size": 82685,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/Machine Data/DMU50/318464-08_A OP2.MPF",
+			"settings":
+			{
+				"buffer_size": 102133,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/Machine Data/DMU50/806-02079-01.MPF",
+			"settings":
+			{
+				"buffer_size": 252674,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/Machine Data/DMU50/001-14372_2.MPF",
+			"settings":
+			{
+				"buffer_size": 345477,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/Machine Data/4181.PRG",
+			"settings":
+			{
+				"buffer_size": 1531,
 				"line_ending": "Windows"
 			}
 		}
@@ -354,6 +383,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\),",
 			"(M(20|30){0,1}(3|4|5)(?!\\d))",
 			"([ON]([\\d])+)",
 			"storage.type",
@@ -480,8 +510,7 @@
 			"^(((?=N\\d+).*)|((?=G0 Z\\[).*)|(.*(?=G53).*)|((?=N27).*)|((?=SIN).*)|((?=M1).*)|((?=B90.).*))\\n",
 			"((?=N27).*)|((?=G0 Z\\[).*)|(.*(?=G53).*)|((?=N27).*)",
 			"((?=N27).*)|(G53[\\.5]*)",
-			"/(?s:G1 G98)(?s:.*)G40 [XYZ]-*\\d*\\.*\\d+\\.*\\n(?=G0)/",
-			"(?s:G1 G98[\\w\\s\\[\\]\\-\\#\\.\\(\\)+]+)G40"
+			"/(?s:G1 G98)(?s:.*)G40 [XYZ]-*\\d*\\.*\\d+\\.*\\n(?=G0)/"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -489,6 +518,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			")\\n",
 			"",
 			",",
 			",\\n",
@@ -615,8 +645,7 @@
 			"$1$2",
 			"H1$1",
 			"D1$1",
-			"H1$1",
-			"T1$1"
+			"H1$1"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -627,7 +656,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -655,7 +684,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -664,15 +693,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1750,
+						"buffer_size": 1605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1316,
-								1316
+								849,
+								849
 							]
 						],
 						"settings":
@@ -680,10 +709,10 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 507.0,
+						"translation.y": 282.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -699,8 +728,8 @@
 						"selection":
 						[
 							[
-								952,
-								952
+								463,
+								463
 							]
 						],
 						"settings":
@@ -708,10 +737,10 @@
 							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -727,8 +756,92 @@
 						"selection":
 						[
 							[
-								411,
-								411
+								458,
+								458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/I/Machine Data/DMU50/318464-08_A OP2.MPF",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 102133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/I/Machine Data/DMU50/806-02079-01.MPF",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 252674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/I/Machine Data/DMU50/001-14372_2.MPF",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 345477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -741,13 +854,41 @@
 					},
 					"stack_index": 1,
 					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/I/Machine Data/4181.PRG",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -846,7 +987,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 254.0,
+	"side_bar_width": 181.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
