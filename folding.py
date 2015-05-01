@@ -35,17 +35,14 @@ def isRegionsAdjacent(l, r):
 	return ( ( int(l.b) + 1 ) == int(r.a) )
 
 def mergeAdjacentRegions(i, regions):
-	print('\n regions: \n',regions)
-	# perform comparison
-	while isRegionsAdjacent(regions[i], regions[i+1]):
-		regions[i+1].a = regions[i].a	# copy l to r 
-		del (regions[i])				# delete l
-		# if i will be out of range on the next pass then we nidda git ridda it
-		if i+1 == len(regions):
-			break;
-	else:
-		i += 1
-		mergeAdjacentRegions(i, regions)
+	while i + 1 < len(regions):
+		# perform comparison
+		if isRegionsAdjacent(regions[i], regions[i+1]):
+			regions[i+1].a = regions[i].a	# copy l to r 
+			del (regions[i])				# delete l
+		else:
+			i += 1
+			mergeAdjacentRegions(i, regions)
 	return i, regions
 
 class ShowOnlyCommentsCommand(sublime_plugin.TextCommand):
