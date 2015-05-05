@@ -1,4 +1,5 @@
 [
     { "caption": "Show Only Comments", "command": "show_only_comments" },
-    { "caption": "Show Outline", "command": "show_program_outline" }
+    { "caption": "Show Outline", "command": "show_program_outline" },
+    { "caption": "test", "command": "test" }
 ]

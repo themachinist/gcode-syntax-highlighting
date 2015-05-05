@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"reduce",
+				"reduceAdjacentRegions"
+			],
+			[
 				"merge",
 				"mergeAdjacentRegionsLeftToRight"
 			],
@@ -24,18 +28,10 @@
 	"buffers":
 	[
 		{
-			"file": "default.sublime-commands",
-			"settings":
-			{
-				"buffer_size": 146,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "folding.py",
 			"settings":
 			{
-				"buffer_size": 1605,
+				"buffer_size": 3004,
 				"line_ending": "Windows"
 			}
 		},
@@ -48,42 +44,10 @@
 			}
 		},
 		{
-			"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
-			"settings":
-			{
-				"buffer_size": 82685,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/Machine Data/DMU50/318464-08_A OP2.MPF",
-			"settings":
-			{
-				"buffer_size": 102133,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/Machine Data/DMU50/806-02079-01.MPF",
-			"settings":
-			{
-				"buffer_size": 252674,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/I/Machine Data/DMU50/001-14372_2.MPF",
 			"settings":
 			{
 				"buffer_size": 345477,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/Machine Data/4181.PRG",
-			"settings":
-			{
-				"buffer_size": 1531,
 				"line_ending": "Windows"
 			}
 		}
@@ -200,9 +164,12 @@
 	},
 	"console":
 	{
-		"height": 216.0,
+		"height": 209.0,
 		"history":
 		[
+			"dir(\"functools\")",
+			"dir(\"functools\"",
+			"dir(functools)",
 			"print('\\n'*100)",
 			"os.system('cls')",
 			"clear",
@@ -233,11 +200,18 @@
 	],
 	"file_history":
 	[
-		"/C/Users/winslow/AppData/Local/Temp/FoldComments/foldcomments.py",
+		"/I/Machine Data/4181.PRG",
+		"/I/Machine Data/DMU50/001-14372_2.MPF",
+		"/I/Machine Data/DMU50/806-02079-01.MPF",
+		"/I/Machine Data/DMU50/318464-08_A OP2.MPF",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
+		"/C/Users/winslow/Downloads/A-small-practice.in",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/default.sublime-commands",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
+		"/C/Users/winslow/AppData/Local/Temp/FoldComments/foldcomments.py",
 		"/H/EMLKTK2014",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/filter.py",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
 		"/C/Winslow/Programming/MTConnect-JS/proxy.php",
 		"/C/Users/winslow/Downloads/I++DME specification document 1.7",
 		"/I/Machine Data/Integrex 44/03-0088-E_SHAFT_BEATER_DRIVE.eia",
@@ -353,14 +327,7 @@
 		"/I/Machine Shop/CNC PROGRAMS/Mill/Inbox/$.NC",
 		"/I/Machine Shop/CNC PROGRAMS/Mill/Inbox/jM.NC",
 		"/I/B4 Research & Development/SerialEngrave/DemoProgram.nc",
-		"//mazak-44/MC_Machine Programs/319090-02_A-step-bore.eia",
-		"/I/Manufacturing Data/NC Files/319090-02_A.eia",
-		"/I/Manufacturing Data/Citizen L7 Sample Part Complete.nc",
-		"/I/Machine Data/DMU50/001-14372_2.MPF",
-		"/I/Winslow/Job Listings/CNC Setup Machinist.html",
-		"/I/Winslow/Programming/wikimedia/DiscourseSkin/resources/screen.css",
-		"/I/Winslow/Programming/wikimedia/DiscourseSkin/DiscourseSkin.php",
-		"/I/Winslow/Programming/wikimedia/DiscourseSkin/resources/print.css"
+		"//mazak-44/MC_Machine Programs/319090-02_A-step-bore.eia"
 	],
 	"find":
 	{
@@ -656,52 +623,24 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "default.sublime-commands",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								144,
-								144
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/AAAPackageDev/Syntax Definitions/Sublime Commands.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "folding.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1605,
+						"buffer_size": 3004,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								849,
-								849
+								1627,
+								1627
 							]
 						],
 						"settings":
@@ -709,14 +648,14 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 282.0,
+						"translation.y": 791.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
 					"semi_transient": false,
 					"settings":
@@ -728,107 +667,23 @@
 						"selection":
 						[
 							[
-								463,
-								463
+								197,
+								197
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 82685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								458,
-								458
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/I/Machine Data/DMU50/318464-08_A OP2.MPF",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 102133,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/I/Machine Data/DMU50/806-02079-01.MPF",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 252674,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 2,
 					"file": "/I/Machine Data/DMU50/001-14372_2.MPF",
 					"semi_transient": false,
 					"settings":
@@ -852,35 +707,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/I/Machine Data/4181.PRG",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1531,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

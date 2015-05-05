@@ -5,7 +5,8 @@
         "children":
         [
             { "command": "show_only_comments" },
-            { "command": "show_program_outline" }
+            { "command": "show_program_outline" },
+            { "command": "test" }
         ]
     }
 ]
