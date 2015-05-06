@@ -2,7 +2,7 @@
 ---
 name: G-code
 scopeName: source.iso6983
-fileTypes: [eia,nc,ngc,prg,mpf]
+fileTypes: [eia,nc,ngc,prg,mpf,gcode]
 uuid: e6875107-21f9-449b-bbae-036db969b3d2
 
 patterns:
@@ -26,7 +26,7 @@ patterns:
   name: keyword.operator
   match: (GT|LT|GE|LE|EQ)
 
-- comment: flow control operators: locations
+- comment: flow control operators - locations
   name: markup.italic
   match: (?<=GOTO|DO)\d+
 
@@ -38,11 +38,11 @@ patterns:
   name: variable.other
   match: (#\d+)
 
-- comment: positions: alpha component
+- comment: positions - alpha component
   name: markup.bold
   match: ([XYZABC]{1})(?=([\d\.-])*)
 
-- comment: positions: numeric component
+- comment: positions - numeric component
   name: constant.numeric
   match: (?<=[XYZABC])([\d\.-])*
 

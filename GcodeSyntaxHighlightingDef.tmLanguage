@@ -8,6 +8,7 @@
 		<string>ngc</string>
 		<string>prg</string>
 		<string>mpf</string>
+		<string>gcode</string>
 	</array>
 	<key>name</key>
 	<string>G-code</string>
