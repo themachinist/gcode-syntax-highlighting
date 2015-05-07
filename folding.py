@@ -1,8 +1,8 @@
 import sublime
 import sublime_plugin
+import cProfile, pstats, io
 import re
 import functools
-import cProfile
 
 def matches(needle, haystack, is_re):
     if is_re:
@@ -78,9 +78,28 @@ def reduceAdjacentRegions(v, e, needle):
 
 def test(v,e,needle):
 	regions = v.find_all(needle)
-	cProfile.run('reduceAdjacentRegions(v, e, needle)')
-	cProfile.run('mergeAdjacentRegions(0, regions)')
+	pr = cProfile.Profile()
 	
+	pr.enable()
+	reduceAdjacentRegions(v, e, needle)
+	pr.disable()
+
+	s = io.StringIO()
+	sortby = 'cumulative'
+	ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+	ps.print_stats()
+	print(s.getvalue())
+
+	pr.enable()
+	mergeAdjacentRegions(0, regions)
+	pr.disable()
+	
+	s = io.StringIO()
+	sortby = 'cumulative'
+	ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+	ps.print_stats()
+	print(s.getvalue())
+
 class ShowOnlyCommentsCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		needle = '^((?!\(.*\)).)*$' #this is the opposite of
@@ -96,3 +115,4 @@ class TestCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		needle = '^((?!\(.*\)).)*$'
 		test(self.view, edit, needle)
+

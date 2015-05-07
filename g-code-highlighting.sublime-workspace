@@ -27,34 +27,38 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "folding.py",
-			"settings":
-			{
-				"buffer_size": 3004,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
-			"settings":
-			{
-				"buffer_size": 1305,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/Machine Data/DMU50/001-14372_2.MPF",
-			"settings":
-			{
-				"buffer_size": 345477,
-				"line_ending": "Windows"
-			}
-		}
 	],
-	"build_system": "",
+	"build_system": "Packages/AAAPackageDev/Support/Convert to ....sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					""
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"JSON"
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"Property List"
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"YAML (Block Style)"
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"YAML (Default Style)"
+				]
+			],
+			[
+				"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
@@ -200,15 +204,19 @@
 	],
 	"file_history":
 	[
-		"/I/Machine Data/4181.PRG",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/test.gcode",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage",
 		"/I/Machine Data/DMU50/001-14372_2.MPF",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/folding.py",
+		"/I/Machine Data/4181.PRG",
 		"/I/Machine Data/DMU50/806-02079-01.MPF",
 		"/I/Machine Data/DMU50/318464-08_A OP2.MPF",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
 		"/C/Users/winslow/Downloads/A-small-practice.in",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/default.sublime-commands",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
 		"/C/Users/winslow/AppData/Local/Temp/FoldComments/foldcomments.py",
 		"/H/EMLKTK2014",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/filter.py",
@@ -323,11 +331,7 @@
 		"/E/Building #4/CORTNEY VIDEO FILES ETC/ADOBE AUDITION CS6/REL_2013.RSA",
 		"/I/Machine Data/.MPF",
 		"/I/B4 MASS MACHINE SHOP/INTUITIVE SURGICAL/318418-06_D/318418-06_D MIDDLE/PROGRAMS/SerialEngrave/SerializeEngrave.nc",
-		"/I/B4 Research & Development/SerialEngrave/SerializeEngrave.nc",
-		"/I/Machine Shop/CNC PROGRAMS/Mill/Inbox/$.NC",
-		"/I/Machine Shop/CNC PROGRAMS/Mill/Inbox/jM.NC",
-		"/I/B4 Research & Development/SerialEngrave/DemoProgram.nc",
-		"//mazak-44/MC_Machine Programs/319090-02_A-step-bore.eia"
+		"/I/B4 Research & Development/SerialEngrave/SerializeEngrave.nc"
 	],
 	"find":
 	{
@@ -623,93 +627,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "folding.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1627,
-								1627
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 791.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								197,
-								197
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/I/Machine Data/DMU50/001-14372_2.MPF",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 345477,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
