@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"L",
+				"Label_1"
+			],
+			[
 				"reduce",
 				"reduceAdjacentRegions"
 			],
@@ -27,6 +31,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
+			"settings":
+			{
+				"buffer_size": 596,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_SERIES.SPF",
+			"settings":
+			{
+				"buffer_size": 1553,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_DIGIT.SPF",
+			"settings":
+			{
+				"buffer_size": 3575,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/AAAPackageDev/Support/Convert to ....sublime-build",
 	"build_system_choices":
@@ -168,7 +196,7 @@
 	},
 	"console":
 	{
-		"height": 209.0,
+		"height": 269.0,
 		"history":
 		[
 			"dir(\"functools\")",
@@ -204,19 +232,28 @@
 	],
 	"file_history":
 	[
+		"/I/Machine Data/DMU50/806-02079-01.MPF",
+		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_STRING.SPF",
+		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_SERIES.SPF",
+		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_DIGIT.SPF",
+		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_CHAR.SPF",
+		"/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/folding.py",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/default.sublime-commands",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
+		"/I/B4 Research & Development/SerialEngrave/DemoProgram.nc",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/O1234 (5AXIS TEST).nc",
+		"/I/Machine Data/DMU50/001-14372_2.MPF",
+		"/I/Machine Data/DMU50/316115-04_A OP2.MPF",
+		"/I/Machine Data/4181.PRG",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/test.gcode",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage",
-		"/I/Machine Data/DMU50/001-14372_2.MPF",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/folding.py",
-		"/I/Machine Data/4181.PRG",
-		"/I/Machine Data/DMU50/806-02079-01.MPF",
 		"/I/Machine Data/DMU50/318464-08_A OP2.MPF",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
 		"/C/Users/winslow/Downloads/A-small-practice.in",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/default.sublime-commands",
 		"/C/Users/winslow/AppData/Local/Temp/FoldComments/foldcomments.py",
 		"/H/EMLKTK2014",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/filter.py",
@@ -322,16 +359,7 @@
 		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/meas/values",
 		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/values",
 		"/C/ZEISS/CMM_TOOLS/ZOIME000.INF",
-		"/C/Program Files (x86)/Zeiss/CALYPSO 5.8/config/env/aer.ini",
-		"/C/Program Files (x86)/Zeiss/CALYPSO 5.8/config/env/ww_syste.col",
-		"/C/Program Files (x86)/Zeiss/CALYPSO 5.8/bin/vwnt.exe.config",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/Documentation.xml",
-		"/E/Building #4/CORTNEY VIDEO FILES ETC/ADOBE AUDITION CS6/REL_2013.SF",
-		"/H/Eng/CAD14/MASS/Almond/Almond MASS DRP v01_092414/806-02068_01_MFG DWG.pdf",
-		"/E/Building #4/CORTNEY VIDEO FILES ETC/ADOBE AUDITION CS6/REL_2013.RSA",
-		"/I/Machine Data/.MPF",
-		"/I/B4 MASS MACHINE SHOP/INTUITIVE SURGICAL/318418-06_D/318418-06_D MIDDLE/PROGRAMS/SerialEngrave/SerializeEngrave.nc",
-		"/I/B4 Research & Development/SerialEngrave/SerializeEngrave.nc"
+		"/C/Program Files (x86)/Zeiss/CALYPSO 5.8/config/env/aer.ini"
 	],
 	"find":
 	{
@@ -354,6 +382,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" \\* -1",
+			" \\* -1 ",
+			" * -1 ",
+			"- 1",
+			"(\\[ABS\\[\\#130\\])]",
+			"(\\[)(-)*(\\[ABS\\[\\#130\\]\\])]",
+			"(\\[-)*(\\[ABS\\[\\#130\\]\\])]",
+			"(Label_([A-Z]):)",
+			"^((?!Label_([A-Z])).)*\\n",
+			"^((?!Label_([A-Z])).)*",
+			"\\(Move to start position\\)\\n",
+			"(Move to start position)\\n",
+			"\\(Move to start position\\)",
+			":\\d+ \\(Letter ([A-Z]+)\\)",
+			"N\\d+ ",
+			"M99",
+			"((; )(Number )(\\d))",
+			"((; Number )(\\d))",
+			" F\\d+\\.",
+			"\\(Move to start position\\)\\n",
+			"\\:\\d+ \\(([\\d\\w ]+)\\)",
+			";",
+			"N",
+			"line",
 			"\\),",
 			"(M(20|30){0,1}(3|4|5)(?!\\d))",
 			"([ON]([\\d])+)",
@@ -457,31 +509,7 @@
 			"pickup",
 			"(?s:.*?)pickup(.*?M1)\\K",
 			"(?s:.*?)pickup\\K",
-			"(?s:.*?)pickup",
-			"(^(?!.*(\\(.*\\)).*).*)|^\\n?",
-			"^(?!.*(\\(.*\\)).*).*",
-			"(N\\d+)",
-			"^\\n?",
-			"^(?!.*((N\\d+)|(G0 Z\\[)|(G53)|(SIN)|(B90.)|(G0 Z)|M251).*).*\\n",
-			"M358",
-			"m358",
-			"pickup",
-			"(?<=(G68\\.5))(?s:.*?)\\KM1\\K|G97",
-			"(?<=(G68\\.5))(?s:.*?)\\KG97",
-			"(?<=(G68\\.5))(?=(?s:.*?))\\KG97",
-			"(?<=(G68\\.5))(?s:.*)\\KG97",
-			"(?<=G68\\.5)",
-			"pickup",
-			"(n\\d+)",
-			"^(?!.*((N\\d+)|(G0 Z\\[)|(G53)|(SIN)|(B90.)).*).*\\n",
-			"(n\\d+)",
-			"^(?!.*((N\\d+)|(G0 Z\\[)|(G53)|(SIN)|(B90.)).*).*\\n",
-			"^(?!.*((N\\d+)|(G0 Z\\[)|(G53)|(SIN)|(M1)|(B90.)).*).*\\n",
-			"^(?!.*(?=N\\d+).*)|((?=G0 Z\\[).*)|(.*(?=G53).*)|((?=SIN).*)|((?=M1).*)|((?=B90.).*)",
-			"^(((?=N\\d+).*)|((?=G0 Z\\[).*)|(.*(?=G53).*)|((?=N27).*)|((?=SIN).*)|((?=M1).*)|((?=B90.).*))\\n",
-			"((?=N27).*)|((?=G0 Z\\[).*)|(.*(?=G53).*)|((?=N27).*)",
-			"((?=N27).*)|(G53[\\.5]*)",
-			"/(?s:G1 G98)(?s:.*)G40 [XYZ]-*\\d*\\.*\\d+\\.*\\n(?=G0)/"
+			"(?s:.*?)pickup"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -489,6 +517,26 @@
 		"regex": true,
 		"replace_history":
 		[
+			"*-1",
+			"-1",
+			"=_r_plane",
+			"=_r_plane * $2 1",
+			"=_r_plane * $21",
+			"=$2_r_plane * -1",
+			"=$2 * -1",
+			"$2 GOTOF $1",
+			"$2 GOTO $1",
+			"",
+			"$1 $2 $3",
+			"",
+			"Label_$1:\\n; Letter $1",
+			"",
+			"N$4 Label_$4:\\n; $3$4",
+			"N$4 Label_$4:\\n$3$4",
+			"N$3\\n$2$3",
+			"",
+			"; $1",
+			"",
 			")\\n",
 			"",
 			",",
@@ -596,27 +644,7 @@
 			"T20",
 			"T19",
 			"",
-			"\\n|-\\n",
-			"| $1 || || ## || $2-code # which calls program O$3",
-			"",
-			"$2 $1",
-			"$1 $2 $3",
-			"\\t",
-			"$1 ",
-			":$1",
-			"#52$1",
-			"H$1",
-			"H2$1",
-			"D2$1",
-			"T2$1",
-			"DH1$1",
-			"D1$1",
-			"T1$1",
-			"$11$2",
-			"$1$2",
-			"H1$1",
-			"D1$1",
-			"H1$1"
+			"\\n|-\\n"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -627,8 +655,95 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_SERIES.SPF",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1463,
+								1463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_DIGIT.SPF",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -733,7 +848,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 181.0,
+	"side_bar_width": 246.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

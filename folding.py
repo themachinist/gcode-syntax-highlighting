@@ -1,8 +1,6 @@
 import sublime
 import sublime_plugin
-import cProfile, pstats, io
 import re
-import functools
 
 def matches(needle, haystack, is_re):
     if is_re:
@@ -10,27 +8,10 @@ def matches(needle, haystack, is_re):
     else:
         return (needle in haystack)
 
-def filter(v, e, needle, is_re = False):
-
-    # get non-empty selections
-    regions = [s for s in v.sel() if not s.empty()]
-
-    # if there's no non-empty selection, filter the whole document
-    if len(regions) == 0:
-        regions = [ sublime.Region(0, v.size()) ]
-    
-    for region in reversed(regions):
-        lines = v.split_by_newlines(region)
-        tofilter = lines
-
-        for line in reversed(lines):
-
-            if not matches(needle, v.substr(line), is_re):
-                tofilter.remove(line)
-
+# probably refactor this to only unfold->fold
 def fold(v, e, needle):
 	regions = v.find_all(needle)
-	regions = mergeAdjacentRegions(0, regions)[1]
+	regions = reduceAdjacentRegions(regions)
 	v.unfold(v.find_all('^.*$'))
 	v.fold(regions)
 
@@ -41,25 +22,12 @@ def compareRegions(x,y):
 def isRegionsAdjacent(l, r):
 	return ( ( l.b + 1 ) == r.a )
 
-def mergeAdjacentRegions(i, regions):
-	while i + 1 < len(regions):
-		n = i + 1
-		# perform comparison
-		if isRegionsAdjacent(regions[i], regions[n]):
-			regions[n].a = regions[i].a	# copy l to r 
-			regions.pop(i)				# delete l
-		else:
-			i += 1
-			mergeAdjacentRegions(i, regions)
-	return i, regions
-
 # a Region describes the start position and end position of a set of characters in the View
 # e.g. [(249,283)]
-def reduceAdjacentRegions(v, e, needle):
-	
-	regionsFound 			= v.find_all( needle )	# search for regions
-	regionsFiltered 		= []					# initialize match list
-	regionHasStartPosition	= 0						# this region's property a is the beginning of our new region
+def reduceAdjacentRegions(regionsFound):
+
+	regionsFiltered 		= []	# initialize match list
+	regionHasStartPosition	= 0		# this region's property a is the beginning of our new region
 
 	# iterate through regions in list regionsFound
 	for index in range( len(regionsFound) - 1):
@@ -75,30 +43,7 @@ def reduceAdjacentRegions(v, e, needle):
 			region 			= sublime.Region( startPosition, regionsFound[ index ].b )
 			regionsFiltered.append( region )
 			regionHasStartPosition = index + 1
-
-def test(v,e,needle):
-	regions = v.find_all(needle)
-	pr = cProfile.Profile()
-	
-	pr.enable()
-	reduceAdjacentRegions(v, e, needle)
-	pr.disable()
-
-	s = io.StringIO()
-	sortby = 'cumulative'
-	ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
-	ps.print_stats()
-	print(s.getvalue())
-
-	pr.enable()
-	mergeAdjacentRegions(0, regions)
-	pr.disable()
-	
-	s = io.StringIO()
-	sortby = 'cumulative'
-	ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
-	ps.print_stats()
-	print(s.getvalue())
+	return regionsFiltered
 
 class ShowOnlyCommentsCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
@@ -108,11 +53,12 @@ class ShowOnlyCommentsCommand(sublime_plugin.TextCommand):
 
 class ShowProgramOutlineCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		needle = '^([XYZIJKABC]|(G1 )).*$'
+		needle = '.*[XYZ][-.\d].*'
 		fold(self.view, edit, needle)
 
-class TestCommand(sublime_plugin.TextCommand):
+class RemoveLineNumbers(sublime_plugin.TextCommand):
 	def run(self, edit):
-		needle = '^((?!\(.*\)).)*$'
-		test(self.view, edit, needle)
-
+		selector = "storage.type.linenum"
+		regions = self.view.find_by_selector(selector)
+		if len(regions) > 0:
+			self.view.erase(edit, regions)

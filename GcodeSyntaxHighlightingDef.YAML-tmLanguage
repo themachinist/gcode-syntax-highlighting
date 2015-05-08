@@ -35,9 +35,13 @@ patterns:
   name: variable.other
   match: (#\d+)
 
-- comment: O & N numberes
+- comment: program numberes
   name: storage.type.programnum
-  match: ([ON]([\d])+)
+  match: ([O]([\d])+)
+
+- comment: line numberes
+  name: storage.type.linenum
+  match: ([N]([\d])+)
 
 - comment: Pre-load tool number
   name: support.function.tool2

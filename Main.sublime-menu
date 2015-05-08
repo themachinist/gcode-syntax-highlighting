@@ -6,7 +6,7 @@
         [
             { "command": "show_only_comments" },
             { "command": "show_program_outline" },
-            { "command": "test" }
+            { "command": "remove_line_numbers" }
         ]
     }
 ]
