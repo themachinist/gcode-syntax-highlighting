@@ -56,9 +56,13 @@ class ShowProgramOutlineCommand(sublime_plugin.TextCommand):
 		needle = '.*[XYZ][-.\d].*'
 		fold(self.view, edit, needle)
 
+# it looks like doing any operation on a large list is going to take forever
+# should probably investigate thread/spinner
 class RemoveLineNumbers(sublime_plugin.TextCommand):
 	def run(self, edit):
-		selector = "storage.type.linenum"
-		regions = self.view.find_by_selector(selector)
+		v = self.view
+		needle = 'N\d+ '
+		regions = v.find_all(needle)
 		if len(regions) > 0:
-			self.view.erase(edit, regions)
+			for r in reversed(regions):
+				v.erase(edit, r)

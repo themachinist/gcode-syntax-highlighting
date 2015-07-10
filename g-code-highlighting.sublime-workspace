@@ -32,26 +32,18 @@
 	"buffers":
 	[
 		{
-			"file": "/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
+			"file": "/F/858.PRG",
 			"settings":
 			{
-				"buffer_size": 596,
+				"buffer_size": 2625,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_SERIES.SPF",
+			"file": "/F/687.PRG",
 			"settings":
 			{
-				"buffer_size": 1553,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_DIGIT.SPF",
-			"settings":
-			{
-				"buffer_size": 3575,
+				"buffer_size": 2853,
 				"line_ending": "Windows"
 			}
 		}
@@ -91,10 +83,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 150.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "close ",
 		"selected_items":
 		[
+			[
+				"close ",
+				"Project: Close"
+			],
+			[
+				"view",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
 			[
 				"remove",
 				"Package Control: Remove Package"
@@ -164,10 +172,6 @@
 				"Package Control: Create Package File"
 			],
 			[
-				"menu",
-				"View: Toggle Menu"
-			],
-			[
 				"css",
 				"Set Syntax: CSS"
 			],
@@ -192,13 +196,16 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 588.0
+		"width": 378.0
 	},
 	"console":
 	{
 		"height": 269.0,
 		"history":
 		[
+			"pat = re.compile(\"(?<=tour.smesv.org;\\n).*(http.*)\")",
+			"pat = re.compile((?<=tour.smesv.org;\\n).*(http.*))",
+			"import re",
 			"dir(\"functools\")",
 			"dir(\"functools\"",
 			"dir(functools)",
@@ -232,12 +239,35 @@
 	],
 	"file_history":
 	[
-		"/I/Machine Data/DMU50/806-02079-01.MPF",
-		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_STRING.SPF",
+		"/I/Machine Shop/CNC PROGRAMS/Mill/Mill Out/MASS MGLB-HD-02_00 OP1.NC",
+		"/I/shared mcamx8/mill/Posts/MASS POST/MASS KITAMURA HORIZONAL.pst",
+		"/I/shared mcamx8/mill/Posts/MASS POST/Mass Kitamurai 3X Mill.pst",
+		"/U/104258.MPF",
+		"/U/104258_HFJH.MPF",
+		"/I/Machine Data/1040687_A.PRG",
+		"/U/1042058_BSHIFTHOLES2.MPF",
+		"/I/Machine Data/Citizen/858.PRG",
+		"/I/Machine Data/1036540_D.MPF",
+		"/I/Machine Data/DMU50/1042057_B SHIFT HOLES 1.MPF",
+		"/F/687.PRG",
+		"/I/DNC Server backup/07012013/Command list for #14 Fadal VMC 4020A",
+		"/C/Winslow/smesv.org.conf",
+		"/I/DNC Server backup/07012013/PC-DNC Plus COM port settings for #25 Puma 6G",
+		"/I/DNC Server backup/07012013/Queue list for #6 Fadal VMC2216",
+		"/C/Winslow/find_latest_tour.py",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/plugin.py",
+		"/C/Winslow/smesv.org.conf.tmp",
+		"/U/autorun.ini",
+		"/U/autorun.ico",
+		"/I/Machine Data/1036573_05OP1.MPF",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
+		"/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
 		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_SERIES.SPF",
 		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_DIGIT.SPF",
+		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage",
+		"/I/Machine Data/DMU50/806-02079-01.MPF",
+		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_STRING.SPF",
 		"/I/B4 Research & Development/SerialEngrave/ENGRAVE_CHAR.SPF",
-		"/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/folding.py",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/default.sublime-commands",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-tools/Main.sublime-menu",
@@ -248,8 +278,6 @@
 		"/I/Machine Data/DMU50/316115-04_A OP2.MPF",
 		"/I/Machine Data/4181.PRG",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/test.gcode",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.YAML-tmLanguage",
-		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/small_test.nc",
 		"/I/Machine Data/DMU50/318464-08_A OP2.MPF",
 		"/C/Users/winslow/AppData/Roaming/Sublime Text 3/Packages/gcode-syntax-highlighting/O1234 (5AXIS TEST).nc",
@@ -298,7 +326,6 @@
 		"/I/Machine Data/1000.PRG",
 		"/I/Machine Data/652-0858_B_DP_ModifiedProcess.",
 		"/U/0860.PRG",
-		"/I/Machine Data/Citizen/858.PRG",
 		"/I/Machine Data/Citizen L7 Sample Part Complete.nc",
 		"/I/Machine Data/652-0858_B-only-od-cutoff.",
 		"/U/0859.PRG",
@@ -339,27 +366,7 @@
 		"/I/Machine Data/Integrex 44/ME-06299 A.eia",
 		"/I/Manufacturing Data/03-0036_B_MULTI.eia",
 		"/I/Machine Data/Integrex 44/258341_AXIS.nc",
-		"/I/Machine Data/Integrex 44/me-06299 sub jaw.eia",
-		"/I/Machine Data/Integrex 44/jaw right.eia",
-		"/I/Machine Data/Integrex 44/jaw left.eia",
-		"/C/Users/winslow/AppData/Local/Microsoft/Windows/WER/ReportArchive/AppCrash_mfgsys.exe_9e88122a4b9c27ce4febe3e498d47c936bf78_28ab005c/Report.wer",
-		"/I/Winslow/Business_Activity_Query_Designer.mfgsys",
-		"/F/4506.PRG",
-		"/I/Winslow/Citizen/4506.PRG",
-		"/I/Winslow/Citizen/1000.PRG",
-		"/I/Winslow/Citizen/1001.PRG",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/env/values",
-		"/C/ProgramData/Zeiss/License/License File - 184028.lic",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/cll.properties",
-		"/E/Building #4/CORTNEY VIDEO FILES ETC/ADOBE AUDITION CS6/customaction.data",
-		"/E/Building #4/CORTNEY VIDEO FILES ETC/ADOBE AUDITION CS6/MANIFEST.MF",
-		"/C/Users/winslow/Desktop/values",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/equip/Simulation/values",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/meas/Simulation/values",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/meas/values",
-		"/C/Users/Public/Documents/Zeiss/CALYPSO/config/values",
-		"/C/ZEISS/CMM_TOOLS/ZOIME000.INF",
-		"/C/Program Files (x86)/Zeiss/CALYPSO 5.8/config/env/aer.ini"
+		"/I/Machine Data/Integrex 44/me-06299 sub jaw.eia"
 	],
 	"find":
 	{
@@ -382,6 +389,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Variable WCS\\[\\d+] out of range\\n",
+			"N\\d+ ",
+			"N\\d++",
+			"t=",
+			"t",
+			"N\\d+ ",
+			"comment\\$",
+			"snamenc\\$",
+			"\\n",
+			"(?<=tour.smesv.org;\\n).*(http.*)",
+			"s_after",
+			"pat",
+			"fname",
 			" \\* -1",
 			" \\* -1 ",
 			" * -1 ",
@@ -496,20 +516,7 @@
 			"\\n(M206\\n)(G4 X1.\\n)(?s:G110 B2.*?M207)",
 			"\\n\\K(M206\\n)(G4 X1.\\n)(?s:G110 B2.*?M207)",
 			"(M206\\n)(G4 X1.\\n)(?s:G110 B2.*?M207)",
-			"(M206\\nG4 X1.\\n)((?s:G110 B2.*?M207)\\K)",
-			"M206\\nG4 X1.\\n(?s:G110 B2.*?M207)\\K",
-			"(?=M206\\n)(?s:G110 B2.*?M207)\\K",
-			"bar pull",
-			"pickup",
-			"BAR PULL",
-			"bar pull",
-			"groove 1",
-			"pickup",
-			"n56",
-			"pickup",
-			"(?s:.*?)pickup(.*?M1)\\K",
-			"(?s:.*?)pickup\\K",
-			"(?s:.*?)pickup"
+			"(M206\\nG4 X1.\\n)((?s:G110 B2.*?M207)\\K)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -517,6 +524,11 @@
 		"regex": true,
 		"replace_history":
 		[
+			"",
+			"\\\\n",
+			"replacement",
+			"pattern",
+			"filename",
 			"*-1",
 			"-1",
 			"=_r_plane",
@@ -639,12 +651,7 @@
 			"T22",
 			"T15",
 			"T21",
-			"T5",
-			"T11",
-			"T20",
-			"T19",
-			"",
-			"\\n|-\\n"
+			"T5"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -660,19 +667,53 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/I/B4 Research & Development/SerialEngrave/DemoProgram.MPF",
+					"file": "/F/858.PRG",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 596,
+						"buffer_size": 2625,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								211,
-								211
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/gcode-syntax-highlighting/GcodeSyntaxHighlightingDef.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "/F/687.PRG",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -684,64 +725,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_SERIES.SPF",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1553,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1463,
-								1463
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/I/B4 Research & Development/SerialEngrave/ENGRAVE_DIGIT.SPF",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3575,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -764,11 +747,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -840,15 +830,15 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 246.0,
+	"side_bar_width": 314.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
