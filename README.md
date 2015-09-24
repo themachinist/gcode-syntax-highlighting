@@ -20,3 +20,7 @@ G code
 ```
 
 Install the package, restart Sublime Text, and enjoy!
+
+## Out of Maintenance 
+
+Hi, unfortunately I stopped maintaining this shortly after creating it. I use vim almost exclusively now, and lately there has not been much new g code to read.
